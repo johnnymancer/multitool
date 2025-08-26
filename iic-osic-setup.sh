@@ -22,6 +22,15 @@
 # and a few other tools for use with SkyWater Technology SKY130.
 # ========================================================================
 
+# Helper function for printing status
+print_status() {
+    if [ $? -eq 0 ]; then
+        echo -e "\e[32m[ OK ]\e[0m"
+    else
+        echo -e "\e[31m[ FAILED ]\e[0m"
+    fi
+}
+
 # Define setup environment
 # ------------------------
 export MY_PDK_ROOT="$HOME/pdk"
@@ -31,7 +40,7 @@ export OPENLANE_DIR="$HOME/OpenLane"
 my_path=$(realpath "$0")
 my_dir=$(dirname "$my_path")
 export SCRIPT_DIR="$my_dir"
-export NGSPICE_VERSION=42 
+export NGSPICE_VERSION=43
 # This selects which sky130 PDK flavor (A=sky130A, B=sky130B, all=both)  is installed
 export OPEN_PDK_ARGS="--with-sky130-variants=A"
 export MY_PDK=sky130A
@@ -49,21 +58,36 @@ sudo apt -qq update -y
 sudo apt -qq upgrade -y
 
 
-# Optional removal of unneeded packages to free up space, important for VirtualBox
-# --------------------------------------------------------------------------------
-#echo ">>>> Removing packages to free up space"
-# FIXME could improve this list
-#sudo apt -qq remove -y libreoffice-* pidgin* thunderbird* transmission* xfburn* \
-#	gnome-mines gnome-sudoku sgt-puzzles parole gimp*
-#sudo apt -qq autoremove -y
+# Uninstall old/conflicting docker packages
+echo ">>>> Uninstalling old docker versions"
+for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove -y $pkg; done
+
+# Install prerequisites for docker
+echo ">>>> Installing Docker prerequisites"
+sudo apt-get update
+sudo apt-get install -y ca-certificates curl
+
+# Add Docker's official GPG key
+echo ">>>> Adding Docker GPG key"
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+# Add the repository to Apt sources
+echo ">>>> Setting up Docker repository"
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
 
 
 # Install all the packages available via apt
 # ------------------------------------------
 echo ">>>> Installing required (and useful) packages via APT"
 # FIXME ngspice installed separately, as APT version in LTS is too old
-sudo apt -qq install -y docker.io git klayout iverilog gtkwave ghdl \
-	verilator yosys xdot python3 python3-pip python3.10-venv \
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin git klayout iverilog gtkwave ghdl \
+	verilator yosys xdot python3 python3-pip python3.12-venv gettext python3-setuptools \
 	build-essential automake autoconf gawk m4 flex bison \
 	octave octave-signal octave-communications octave-control \
 	xterm csh tcsh htop mc gedit vim vim-gtk3 kdiff3 \
@@ -72,6 +96,32 @@ sudo apt -qq install -y docker.io git klayout iverilog gtkwave ghdl \
 	libxpm-dev libx11-6 libx11-dev libxrender1 libxrender-dev \
 	libxcb1 libx11-xcb-dev libcairo2 libcairo2-dev  \
 	libxpm4 libxpm-dev libgtk-3-dev
+
+echo ">>>> Verifying installations..."
+echo -n "Checking for docker... "
+command -v docker >/dev/null 2>&1
+print_status
+echo -n "Checking for git... "
+command -v git >/dev/null 2>&1
+print_status
+echo -n "Checking for klayout... "
+command -v klayout >/dev/null 2>&1
+print_status
+echo -n "Checking for iverilog... "
+command -v iverilog >/dev/null 2>&1
+print_status
+echo -n "Checking for gtkwave... "
+command -v gtkwave >/dev/null 2>&1
+print_status
+echo -n "Checking for yosys... "
+command -v yosys >/dev/null 2>&1
+print_status
+echo -n "Checking for flex... "
+command -v flex >/dev/null 2>&1
+print_status
+echo -n "Checking for bison... "
+command -v bison >/dev/null 2>&1
+print_status
 
 
 # Add user to Docker group
@@ -108,10 +158,13 @@ fi
 # ---------------
 cd "$OPENLANE_DIR" || exit
 echo ">>>> Pulling latest OpenLane version"
-make pull-openlane
+sudo make pull-openlane
 echo ">>>> Creating/updating PDK"
 rm -rf "$PDK_ROOT/skywater-pdk" # FIXME WA otherwise `git clone` fails
-make pdk
+sudo make pdk
+echo -n "Checking for PDK installation... "
+test -f "$PDK_ROOT/$PDK/libs.tech/magic/$PDK.magicrc"
+print_status
 
 
 # Apply SPICE modellib reducer
@@ -144,6 +197,9 @@ else
 	git pull
 fi
 make -j"$(nproc)" && sudo make install
+echo -n "Checking for xschem installation... "
+command -v xschem >/dev/null 2>&1
+print_status
 
 
 # Install/update xschem-gaw
@@ -165,6 +221,9 @@ else
         git pull
 fi
 make -j"$(nproc)" && sudo make install
+echo -n "Checking for gaw installation... "
+command -v gaw >/dev/null 2>&1
+print_status
 
 
 # Install/update xschem_sky130
@@ -179,7 +238,7 @@ else
         git pull
 fi
 if [ ! -e "$SCRIPT_DIR/iic-v2sch.awk" ]; then
-	ln -s "$SRC_DIR/xschem_sky130/xschem_verilog_import/make_sky130_sch_from_verilog.awk" "$SCRIPT_DIR/iic-v2sch.awk"
+	cp "$SRC_DIR/xschem_sky130/xschem_verilog_import/make_sky130_sch_from_verilog.awk" "$SCRIPT_DIR/iic-v2sch.awk"
 fi
 
 
@@ -197,6 +256,9 @@ else
         git pull
 fi
 make -j"$(nproc)" && sudo make install
+echo -n "Checking for magic installation... "
+command -v magic >/dev/null 2>&1
+print_status
 
 
 # Install/update netgen
@@ -213,6 +275,9 @@ else
         git pull
 fi
 make -j"$(nproc)" && sudo make install
+echo -n "Checking for netgen installation... "
+command -v netgen >/dev/null 2>&1
+print_status
 
 
 # Install/update ngspice
@@ -220,7 +285,7 @@ make -j"$(nproc)" && sudo make install
 if [ ! -d  "$SRC_DIR/ngspice-$NGSPICE_VERSION" ]; then
 	echo ">>>> Installing ngspice-$NGSPICE_VERSION"
 	cd "$SRC_DIR" || exit
-	wget https://sourceforge.net/projects/ngspice/files/ng-spice-rework/$NGSPICE_VERSION/ngspice-$NGSPICE_VERSION.tar.gz
+	wget https://sourceforge.net/projects/ngspice/files/ng-spice-rework/old-releases/43/ngspice-43.tar.gz
 	gunzip ngspice-$NGSPICE_VERSION.tar.gz
 	tar xf ngspice-$NGSPICE_VERSION.tar
 	rm ngspice-$NGSPICE_VERSION.tar
@@ -228,6 +293,9 @@ if [ ! -d  "$SRC_DIR/ngspice-$NGSPICE_VERSION" ]; then
 	sudo apt install -y libxaw7-dev libfftw3-dev libreadline-dev
 	./configure
 	make -j"$(nproc)" && sudo make install
+	echo -n "Checking for ngspice installation... "
+	command -v ngspice >/dev/null 2>&1
+	print_status
 fi
 
 
@@ -243,6 +311,9 @@ else
 	git pull
 fi
 sudo python3 setup.py install
+echo -n "Checking for spyci installation... "
+python3 -c "import spyci" >/dev/null 2>&1
+print_status
 
 
 # Fix paths in xschemrc to point to correct PDK directory
@@ -287,6 +358,8 @@ chmod 750 "$HOME/iic-init.sh"
 
 # Finished
 # --------
+echo ">>>> Cleaning up source directory"
+rm -rf "$SRC_DIR"
 echo ""
 echo ">>>> All done. Please test the OpenLane install by running"
 echo ">>>> make test"
