@@ -5,105 +5,75 @@ git_hub_access_token.txt  ダウンロード  ビデオ
 iic-osic-setup.sh         テンプレート  ピクチャ
 johnnymancer@johnnymancer-ThinkPad-X260:~$ cd iic_osic
 johnnymancer@johnnymancer-ThinkPad-X260:~/iic_osic$ ls
-johnnymancer@johnnymancer-ThinkPad-X260:~/iic_osic$ git clone https://github.com/iic-jku/osic-multitool.git
-Cloning into 'osic-multitool'...
-remote: Enumerating objects: 580, done.
-remote: Counting objects: 100% (285/285), done.
-remote: Compressing objects: 100% (114/114), done.
-remote: Total 580 (delta 202), reused 246 (delta 171), pack-reused 295 (from 1)
-Receiving objects: 100% (580/580), 124.88 MiB | 12.69 MiB/s, done.
-Resolving deltas: 100% (322/322), done.
-johnnymancer@johnnymancer-ThinkPad-X260:~/iic_osic$ ls
 osic-multitool
 johnnymancer@johnnymancer-ThinkPad-X260:~/iic_osic$ cd osic-multitool
 johnnymancer@johnnymancer-ThinkPad-X260:~/iic_osic/osic-multitool$ ls
-LICENSE    caravel_setup  iic-magic-bindkeys  iic-spice-model-red.py  openvaf
-README.md  example        iic-osic-setup.sh   magic-cheatsheet
+LICENSE        example             iic-spice-model-red.py  openvaf
+README.md      iic-magic-bindkeys  iic-v2sch.awk
+caravel_setup  iic-osic-setup.sh   magic-cheatsheet
 johnnymancer@johnnymancer-ThinkPad-X260:~/iic_osic/osic-multitool$ sudo ./iic-osic-setup.sh
 [sudo] johnnymancer のパスワード: 
-sudo: ./iic-osic-setup.sh: コマンドが見つかりません
-johnnymancer@johnnymancer-ThinkPad-X260:~/iic_osic/osic-multitool$ ls
-LICENSE    caravel_setup  iic-magic-bindkeys  iic-spice-model-red.py  openvaf
-README.md  example        iic-osic-setup.sh   magic-cheatsheet
-johnnymancer@johnnymancer-ThinkPad-X260:~/iic_osic/osic-multitool$ sudo ./iic-osic-setup.sh
-sudo: ./iic-osic-setup.sh: コマンドが見つかりません
-johnnymancer@johnnymancer-ThinkPad-X260:~/iic_osic/osic-multitool$ chmod +x iic-osic-setup.sh
-johnnymancer@johnnymancer-ThinkPad-X260:~/iic_osic/osic-multitool$ sudo ./iic-osic-setup.sh
 >>>> Update packages
 アップグレードできるパッケージが 7 個あります。表示するには 'apt list --upgradable' を実行してください。
 以下のパッケージが自動でインストールされましたが、もう必要とされていません:
-  acpi-support acpid aglfn apturl apturl-common attr berkeley-abc
-  branding-ubuntu ca-certificates-java cheese-common default-jre-headless
-  epstool fonts-kacst fonts-kacst-one fonts-khmeros-core fonts-lao
-  fonts-lklug-sinhala fonts-sil-abyssinica fonts-sil-padauk fonts-thai-tlwg
-  fonts-tibetan-machine fonts-tlwg-garuda fonts-tlwg-garuda-ttf
-  fonts-tlwg-kinnari fonts-tlwg-kinnari-ttf fonts-tlwg-laksaman
-  fonts-tlwg-laksaman-ttf fonts-tlwg-loma fonts-tlwg-loma-ttf fonts-tlwg-mono
-  fonts-tlwg-mono-ttf fonts-tlwg-norasi fonts-tlwg-norasi-ttf
-  fonts-tlwg-purisa fonts-tlwg-purisa-ttf fonts-tlwg-sawasdee
-  fonts-tlwg-sawasdee-ttf fonts-tlwg-typewriter fonts-tlwg-typewriter-ttf
-  fonts-tlwg-typist fonts-tlwg-typist-ttf fonts-tlwg-typo fonts-tlwg-typo-ttf
-  fonts-tlwg-umpush fonts-tlwg-umpush-ttf fonts-tlwg-waree
-  fonts-tlwg-waree-ttf g++-11 gamin gcc-10-base gcc-12-base gir1.2-gck-1
-  gir1.2-gcr-3 gir1.2-goa-1.0 gir1.2-gtksource-4 gir1.2-gweather-3.0
-  gir1.2-javascriptcoregtk-4.0 gir1.2-json-1.0 gir1.2-nma-1.0 gir1.2-snapd-1
-  gir1.2-soup-2.4 gir1.2-webkit2-4.0 gnome-bluetooth gnome-bluetooth-common
-  gnome-mahjongg gnome-mines gnome-sudoku gnuplot-data gnuplot-qt
-  gstreamer1.0-clutter-3.0 guile-2.2-libs irqbalance java-common
-  libabsl20210324 libaec0 libamd-comgr2 libamd2 libamd3 libamdhip64-5
-  libappstream4 libarpack2t64 libatk1.0-data libatkmm-1.6-1v5
+  acpi-support acpid apturl apturl-common attr berkeley-abc branding-ubuntu
+  bridge-utils cheese-common fonts-kacst fonts-kacst-one fonts-khmeros-core
+  fonts-lao fonts-lklug-sinhala fonts-sil-abyssinica fonts-sil-padauk
+  fonts-thai-tlwg fonts-tibetan-machine fonts-tlwg-garuda
+  fonts-tlwg-garuda-ttf fonts-tlwg-kinnari fonts-tlwg-kinnari-ttf
+  fonts-tlwg-laksaman fonts-tlwg-laksaman-ttf fonts-tlwg-loma
+  fonts-tlwg-loma-ttf fonts-tlwg-mono fonts-tlwg-mono-ttf fonts-tlwg-norasi
+  fonts-tlwg-norasi-ttf fonts-tlwg-purisa fonts-tlwg-purisa-ttf
+  fonts-tlwg-sawasdee fonts-tlwg-sawasdee-ttf fonts-tlwg-typewriter
+  fonts-tlwg-typewriter-ttf fonts-tlwg-typist fonts-tlwg-typist-ttf
+  fonts-tlwg-typo fonts-tlwg-typo-ttf fonts-tlwg-umpush fonts-tlwg-umpush-ttf
+  fonts-tlwg-waree fonts-tlwg-waree-ttf g++-11 gamin gcc-10-base gcc-12-base
+  gir1.2-gck-1 gir1.2-gcr-3 gir1.2-goa-1.0 gir1.2-gtksource-4
+  gir1.2-gweather-3.0 gir1.2-javascriptcoregtk-4.0 gir1.2-json-1.0
+  gir1.2-nma-1.0 gir1.2-snapd-1 gir1.2-soup-2.4 gir1.2-webkit2-4.0
+  gnome-bluetooth gnome-bluetooth-common gnome-mahjongg gnome-mines
+  gnome-sudoku gstreamer1.0-clutter-3.0 guile-2.2-libs irqbalance
+  libabsl20210324 libamd2 libappstream4 libatk1.0-data libatkmm-1.6-1v5
   libblockdev-crypto2 libblockdev-fs2 libblockdev-loop2 libblockdev-part-err2
   libblockdev-part2 libblockdev-swap2 libblockdev-utils2 libblockdev2
   libboost-filesystem1.74.0 libboost-iostreams1.74.0 libboost-locale1.74.0
-  libboost-regex1.74.0 libboost-thread1.74.0 libbpf0 libbtf1 libbtf2
-  libcairomm-1.0-1v5 libcamd2 libcamd3 libcamel-1.2-63 libcbor0.8 libccolamd2
-  libccolamd3 libcephfs2 libcheese-gtk25 libcheese8 libcholmod3 libcholmod5
-  libclutter-1.0-0 libclutter-1.0-common libclutter-gst-3.0-0
-  libclutter-gtk-1.0-0 libcogl-common libcogl-pango20 libcogl-path20 libcogl20
-  libcolamd2 libcolord-gtk1t64 libcupsfilters1 libcxsparse3 libcxsparse4
-  libdav1d5 libdazzle-1.0-0 libdazzle-common libdmapsharing-3.0-2
-  libdns-export1110 libebackend-1.2-10 libebook-1.2-20 libebook-contacts-1.2-3
-  libecal-2.0-1 libedata-book-1.2-26 libedata-cal-2.0-1 libedataserver-1.2-26
-  libedataserverui-1.2-3 libemf1 libevent-core-2.1-7t64
-  libevent-pthreads-2.1-7t64 libfabric1 libflac8 libfltk-gl1.3t64
-  libfltk1.3t64 libfontembed1 libfreerdp-client2-2t64 libfreerdp-server2-2t64
+  libboost-regex1.74.0 libboost-thread1.74.0 libbpf0 libbtf1
+  libcairomm-1.0-1v5 libcamd2 libcamel-1.2-63 libcbor0.8 libccolamd2
+  libcephfs2 libcheese-gtk25 libcheese8 libcholmod3 libclutter-1.0-0
+  libclutter-1.0-common libclutter-gst-3.0-0 libclutter-gtk-1.0-0
+  libcogl-common libcogl-pango20 libcogl-path20 libcogl20 libcolamd2
+  libcolord-gtk1t64 libcupsfilters1 libcxsparse3 libdav1d5 libdazzle-1.0-0
+  libdazzle-common libdmapsharing-3.0-2 libdns-export1110 libebackend-1.2-10
+  libebook-1.2-20 libebook-contacts-1.2-3 libecal-2.0-1 libedata-book-1.2-26
+  libedata-cal-2.0-1 libedataserver-1.2-26 libedataserverui-1.2-3 libflac8
+  libfontembed1 libfreerdp-client2-2t64 libfreerdp-server2-2t64
   libfreerdp2-2t64 libgamin0 libgc1 libgcab-1.0-0 libgeocode-glib0
-  libgl1-amber-dri libgl2ps1.4 libglapi-amber libglibmm-2.4-1t64 libglpk40
-  libgnat-10 libgnome-bluetooth13t64 libgnome-games-support-1-3
-  libgnome-games-support-common libgoa-backend-1.0-1
-  libgraphicsmagick++-q16-12t64 libgssdp-1.2-0 libgtkmm-3.0-1t64
-  libgtksourceview-4-0 libgtksourceview-4-common libgupnp-1.2-1
-  libgweather-3-16 libgweather-common libhdf5-103-1t64 libhsa-runtime64-1
-  libhsakmt1 libhwloc-plugins libhwloc15 libicu70 libisc-export1105
-  libjavascriptcoregtk-4.0-18 libkf5idletime5 libklu1 libklu2 libldap-2.5-0
-  libllvm13 libllvm15t64 libllvm17t64 liblua5.2-0 liblua5.3-0
+  libgl1-amber-dri libglapi-amber libglibmm-2.4-1t64 libgnat-10
+  libgnome-bluetooth13t64 libgnome-games-support-1-3
+  libgnome-games-support-common libgoa-backend-1.0-1 libgssdp-1.2-0
+  libgtkmm-3.0-1t64 libgtksourceview-4-0 libgtksourceview-4-common
+  libgupnp-1.2-1 libgweather-3-16 libgweather-common libicu70
+  libisc-export1105 libjavascriptcoregtk-4.0-18 libkf5idletime5 libklu1
+  libldap-2.5-0 libllvm13 libllvm15t64 liblua5.2-0 liblua5.3-0
   libmagick++-6.q16-8 libmagickcore-6.q16-6 libmagickwand-6.q16-6
-  libmessaging-menu0 libmetis5 libmozjs-91-0 libnautilus-extension1a
-  libnetplan0 libnfs13 libnsl-dev libopenblas0 liborcus-0.17-0
-  liborcus-parser-0.17-0 libpangomm-1.4-1v5 libparted-fs-resize0t64
-  libpcre16-3 libpcre3 libpcre3-dev libpcre32-3 libpcrecpp0v5 libperl5.34
-  libplist3 libplot2c2 libpoppler118 libprotobuf23 libpsm-infinipath1
-  libpsm2-2 libpstoedit0t64 libpython3.10-dev libqhull-r8.0 libqhull8.0
-  libqpdf28 libqqwing2v5 libqrupdate1 libqscintilla2-qt5-15
-  libqscintilla2-qt5-l10n libqt5help5 librados2 libraw20 librdmacm1t64
+  libmessaging-menu0 libmozjs-91-0 libnautilus-extension1a libnetplan0
+  libnfs13 libnsl-dev liborcus-0.17-0 liborcus-parser-0.17-0
+  libpangomm-1.4-1v5 libparted-fs-resize0t64 libpcre16-3 libpcre3 libpcre3-dev
+  libpcre32-3 libpcrecpp0v5 libperl5.34 libplist3 libpoppler118 libprotobuf23
+  libpython3.10-dev libqhull8.0 libqpdf28 libqqwing2v5 librados2 libraw20
   libreoffice-pdfimport librest-0.7-0 libruby3.0 librygel-core-2.6-2
   librygel-db-2.6-2 librygel-renderer-2.6-2 librygel-server-2.6-2
-  libscotch-6.1 libscotch-7.0 libsigc++-2.0-0v5 libslicot0 libsmbios-c2
-  libsnapd-glib1 libsoup-gnome-2.4-1 libspqr4 libstdc++-11-dev
-  libsuitesparseconfig5 libsundials-ida4 libsundials-ida6
-  libsundials-nvecserial4 libsundials-sunmatrix2 libsundials-sunmatrix4
-  libsuperlu5 libsuperlu6 libsz2 libtext-unidecode-perl libtiff5 libtiffxx5
-  libtirpc-dev libtrilinos-kokkos-13.2 libtrilinos-trilinosss-13.2 libucx0
-  libumfpack5 libumfpack6 libunistring2 liburing2 libvncserver1 libvpx7
-  libwebkit2gtk-4.0-37 libwinpr2-2t64 libwxbase3.0-0v5 libwxbase3.2-1t64
-  libwxgtk3.0-gtk3-0v5 libwxgtk3.2-1t64 libxnvctrl0 libzip4t64 nautilus-share
-  octave-common octave-doc openjdk-11-jre-headless openjdk-21-jre-headless
-  openmpi-common perl-modules-5.34 pkg-config pstoedit python3-future
-  python3-lib2to3 python3-lockfile python3-macaroonbakery python3-netifaces
-  python3-pip-whl python3-protobuf python3-pyatspi python3-pymacaroons
-  python3-rfc3339 python3-setuptools-whl python3.10 python3.10-dev
+  libscotch-6.1 libsigc++-2.0-0v5 libsmbios-c2 libsnapd-glib1
+  libsoup-gnome-2.4-1 libstdc++-11-dev libsuitesparseconfig5 libsundials-ida4
+  libsundials-nvecserial4 libsundials-sunmatrix2 libsuperlu5 libtiff5
+  libtiffxx5 libtirpc-dev libumfpack5 libunistring2 liburing2 libvncserver1
+  libvpx7 libwebkit2gtk-4.0-37 libwinpr2-2t64 libwxbase3.0-0v5
+  libwxgtk3.0-gtk3-0v5 nautilus-share openjdk-11-jre-headless
+  perl-modules-5.34 pkg-config python3-future python3-lib2to3 python3-lockfile
+  python3-macaroonbakery python3-netifaces python3-protobuf python3-pyatspi
+  python3-pymacaroons python3-rfc3339 python3.10 python3.10-dev
   python3.10-minimal ruby3.0 samba samba-ad-provision samba-vfs-modules
-  tdb-tools tex-common texinfo texinfo-lib ubuntu-advantage-tools
+  tdb-tools ubuntu-advantage-tools ubuntu-fan
 これを削除するには 'sudo apt autoremove' を利用してください。
 Get more security updates through Ubuntu Pro with 'esm-apps' enabled:
   graphicsmagick libzvbi-common libwinpr2-2t64 libavcodec60
@@ -119,10 +89,10 @@ The following upgrades have been deferred due to phasing:
 パッケージリストを読み込んでいます... 完了
 依存関係ツリーを作成しています... 完了        
 状態情報を読み取っています... 完了        
+パッケージ 'docker.io' はインストールされていないため削除もされません
 以下のパッケージが自動でインストールされましたが、もう必要とされていません:
-  acpi-support acpid aglfn apturl apturl-common attr berkeley-abc
-  branding-ubuntu bridge-utils ca-certificates-java cheese-common containerd
-  default-jre-headless epstool fonts-kacst fonts-kacst-one fonts-khmeros-core
+  acpi-support acpid apturl apturl-common attr berkeley-abc branding-ubuntu
+  bridge-utils cheese-common fonts-kacst fonts-kacst-one fonts-khmeros-core
   fonts-lao fonts-lklug-sinhala fonts-sil-abyssinica fonts-sil-padauk
   fonts-thai-tlwg fonts-tibetan-machine fonts-tlwg-garuda
   fonts-tlwg-garuda-ttf fonts-tlwg-kinnari fonts-tlwg-kinnari-ttf
@@ -137,80 +107,57 @@ The following upgrades have been deferred due to phasing:
   gir1.2-gweather-3.0 gir1.2-javascriptcoregtk-4.0 gir1.2-json-1.0
   gir1.2-nma-1.0 gir1.2-snapd-1 gir1.2-soup-2.4 gir1.2-webkit2-4.0
   gnome-bluetooth gnome-bluetooth-common gnome-mahjongg gnome-mines
-  gnome-sudoku gnuplot-data gnuplot-qt gstreamer1.0-clutter-3.0 guile-2.2-libs
-  irqbalance java-common libabsl20210324 libaec0 libamd-comgr2 libamd2 libamd3
-  libamdhip64-5 libappstream4 libarpack2t64 libatk1.0-data libatkmm-1.6-1v5
+  gnome-sudoku gstreamer1.0-clutter-3.0 guile-2.2-libs irqbalance
+  libabsl20210324 libamd2 libappstream4 libatk1.0-data libatkmm-1.6-1v5
   libblockdev-crypto2 libblockdev-fs2 libblockdev-loop2 libblockdev-part-err2
   libblockdev-part2 libblockdev-swap2 libblockdev-utils2 libblockdev2
   libboost-filesystem1.74.0 libboost-iostreams1.74.0 libboost-locale1.74.0
-  libboost-regex1.74.0 libboost-thread1.74.0 libbpf0 libbtf1 libbtf2
-  libcairomm-1.0-1v5 libcamd2 libcamd3 libcamel-1.2-63 libcbor0.8 libccolamd2
-  libccolamd3 libcephfs2 libcheese-gtk25 libcheese8 libcholmod3 libcholmod5
-  libclutter-1.0-0 libclutter-1.0-common libclutter-gst-3.0-0
-  libclutter-gtk-1.0-0 libcogl-common libcogl-pango20 libcogl-path20 libcogl20
-  libcolamd2 libcolord-gtk1t64 libcupsfilters1 libcxsparse3 libcxsparse4
-  libdav1d5 libdazzle-1.0-0 libdazzle-common libdmapsharing-3.0-2
-  libdns-export1110 libebackend-1.2-10 libebook-1.2-20 libebook-contacts-1.2-3
-  libecal-2.0-1 libedata-book-1.2-26 libedata-cal-2.0-1 libedataserver-1.2-26
-  libedataserverui-1.2-3 libemf1 libevent-core-2.1-7t64
-  libevent-pthreads-2.1-7t64 libfabric1 libflac8 libfltk-gl1.3t64
-  libfltk1.3t64 libfontembed1 libfreerdp-client2-2t64 libfreerdp-server2-2t64
+  libboost-regex1.74.0 libboost-thread1.74.0 libbpf0 libbtf1
+  libcairomm-1.0-1v5 libcamd2 libcamel-1.2-63 libcbor0.8 libccolamd2
+  libcephfs2 libcheese-gtk25 libcheese8 libcholmod3 libclutter-1.0-0
+  libclutter-1.0-common libclutter-gst-3.0-0 libclutter-gtk-1.0-0
+  libcogl-common libcogl-pango20 libcogl-path20 libcogl20 libcolamd2
+  libcolord-gtk1t64 libcupsfilters1 libcxsparse3 libdav1d5 libdazzle-1.0-0
+  libdazzle-common libdmapsharing-3.0-2 libdns-export1110 libebackend-1.2-10
+  libebook-1.2-20 libebook-contacts-1.2-3 libecal-2.0-1 libedata-book-1.2-26
+  libedata-cal-2.0-1 libedataserver-1.2-26 libedataserverui-1.2-3 libflac8
+  libfontembed1 libfreerdp-client2-2t64 libfreerdp-server2-2t64
   libfreerdp2-2t64 libgamin0 libgc1 libgcab-1.0-0 libgeocode-glib0
-  libgl1-amber-dri libgl2ps1.4 libglapi-amber libglibmm-2.4-1t64 libglpk40
-  libgnat-10 libgnome-bluetooth13t64 libgnome-games-support-1-3
-  libgnome-games-support-common libgoa-backend-1.0-1
-  libgraphicsmagick++-q16-12t64 libgssdp-1.2-0 libgtkmm-3.0-1t64
-  libgtksourceview-4-0 libgtksourceview-4-common libgupnp-1.2-1
-  libgweather-3-16 libgweather-common libhdf5-103-1t64 libhsa-runtime64-1
-  libhsakmt1 libhwloc-plugins libhwloc15 libicu70 libisc-export1105
-  libjavascriptcoregtk-4.0-18 libkf5idletime5 libklu1 libklu2 libldap-2.5-0
-  libllvm13 libllvm15t64 libllvm17t64 liblua5.2-0 liblua5.3-0
+  libgl1-amber-dri libglapi-amber libglibmm-2.4-1t64 libgnat-10
+  libgnome-bluetooth13t64 libgnome-games-support-1-3
+  libgnome-games-support-common libgoa-backend-1.0-1 libgssdp-1.2-0
+  libgtkmm-3.0-1t64 libgtksourceview-4-0 libgtksourceview-4-common
+  libgupnp-1.2-1 libgweather-3-16 libgweather-common libicu70
+  libisc-export1105 libjavascriptcoregtk-4.0-18 libkf5idletime5 libklu1
+  libldap-2.5-0 libllvm13 libllvm15t64 liblua5.2-0 liblua5.3-0
   libmagick++-6.q16-8 libmagickcore-6.q16-6 libmagickwand-6.q16-6
-  libmessaging-menu0 libmetis5 libmozjs-91-0 libnautilus-extension1a
-  libnetplan0 libnfs13 libnsl-dev libopenblas0 liborcus-0.17-0
-  liborcus-parser-0.17-0 libpangomm-1.4-1v5 libparted-fs-resize0t64
-  libpcre16-3 libpcre3 libpcre3-dev libpcre32-3 libpcrecpp0v5 libperl5.34
-  libplist3 libplot2c2 libpoppler118 libprotobuf23 libpsm-infinipath1
-  libpsm2-2 libpstoedit0t64 libpython3.10-dev libqhull-r8.0 libqhull8.0
-  libqpdf28 libqqwing2v5 libqrupdate1 libqscintilla2-qt5-15
-  libqscintilla2-qt5-l10n libqt5help5 librados2 libraw20 librdmacm1t64
+  libmessaging-menu0 libmozjs-91-0 libnautilus-extension1a libnetplan0
+  libnfs13 libnsl-dev liborcus-0.17-0 liborcus-parser-0.17-0
+  libpangomm-1.4-1v5 libparted-fs-resize0t64 libpcre16-3 libpcre3 libpcre3-dev
+  libpcre32-3 libpcrecpp0v5 libperl5.34 libplist3 libpoppler118 libprotobuf23
+  libpython3.10-dev libqhull8.0 libqpdf28 libqqwing2v5 librados2 libraw20
   libreoffice-pdfimport librest-0.7-0 libruby3.0 librygel-core-2.6-2
   librygel-db-2.6-2 librygel-renderer-2.6-2 librygel-server-2.6-2
-  libscotch-6.1 libscotch-7.0 libsigc++-2.0-0v5 libslicot0 libsmbios-c2
-  libsnapd-glib1 libsoup-gnome-2.4-1 libspqr4 libstdc++-11-dev
-  libsuitesparseconfig5 libsundials-ida4 libsundials-ida6
-  libsundials-nvecserial4 libsundials-sunmatrix2 libsundials-sunmatrix4
-  libsuperlu5 libsuperlu6 libsz2 libtext-unidecode-perl libtiff5 libtiffxx5
-  libtirpc-dev libtrilinos-kokkos-13.2 libtrilinos-trilinosss-13.2 libucx0
-  libumfpack5 libumfpack6 libunistring2 liburing2 libvncserver1 libvpx7
-  libwebkit2gtk-4.0-37 libwinpr2-2t64 libwxbase3.0-0v5 libwxbase3.2-1t64
-  libwxgtk3.0-gtk3-0v5 libwxgtk3.2-1t64 libxnvctrl0 libzip4t64 nautilus-share
-  octave-common octave-doc openjdk-11-jre-headless openjdk-21-jre-headless
-  openmpi-common perl-modules-5.34 pigz pkg-config pstoedit python3-future
-  python3-lib2to3 python3-lockfile python3-macaroonbakery python3-netifaces
-  python3-pip-whl python3-protobuf python3-pyatspi python3-pymacaroons
-  python3-rfc3339 python3-setuptools-whl python3.10 python3.10-dev
-  python3.10-minimal ruby3.0 runc samba samba-ad-provision samba-vfs-modules
-  tdb-tools tex-common texinfo texinfo-lib ubuntu-advantage-tools ubuntu-fan
+  libscotch-6.1 libsigc++-2.0-0v5 libsmbios-c2 libsnapd-glib1
+  libsoup-gnome-2.4-1 libstdc++-11-dev libsuitesparseconfig5 libsundials-ida4
+  libsundials-nvecserial4 libsundials-sunmatrix2 libsuperlu5 libtiff5
+  libtiffxx5 libtirpc-dev libumfpack5 libunistring2 liburing2 libvncserver1
+  libvpx7 libwebkit2gtk-4.0-37 libwinpr2-2t64 libwxbase3.0-0v5
+  libwxgtk3.0-gtk3-0v5 nautilus-share openjdk-11-jre-headless
+  perl-modules-5.34 pkg-config python3-future python3-lib2to3 python3-lockfile
+  python3-macaroonbakery python3-netifaces python3-protobuf python3-pyatspi
+  python3-pymacaroons python3-rfc3339 python3.10 python3.10-dev
+  python3.10-minimal ruby3.0 samba samba-ad-provision samba-vfs-modules
+  tdb-tools ubuntu-advantage-tools ubuntu-fan
 これを削除するには 'sudo apt autoremove' を利用してください。
-以下のパッケージは「削除」されます:
-  docker.io
-アップグレード: 0 個、新規インストール: 0 個、削除: 1 個、保留: 7 個。
-この操作後に 126 MB のディスク容量が解放されます。
-(データベースを読み込んでいます ... 現在 258132 個のファイルとディレクトリがインストールされています。)
-docker.io (27.5.1-0ubuntu3~24.04.2) を削除しています ...
-'/usr/share/docker.io/contrib/nuke-graph-directory.sh' -> '/var/lib/docker/nuke-graph-directory.sh'
-Stopping 'docker.service', but its triggering units are still active:
-docker.socket
-man-db (2.12.0-4build2) のトリガを処理しています ...
+アップグレード: 0 個、新規インストール: 0 個、削除: 0 個、保留: 7 個。
 パッケージリストを読み込んでいます... 完了
 依存関係ツリーを作成しています... 完了        
 状態情報を読み取っています... 完了        
 パッケージ 'docker-doc' はインストールされていないため削除もされません
 以下のパッケージが自動でインストールされましたが、もう必要とされていません:
-  acpi-support acpid aglfn apturl apturl-common attr berkeley-abc
-  branding-ubuntu bridge-utils ca-certificates-java cheese-common containerd
-  default-jre-headless epstool fonts-kacst fonts-kacst-one fonts-khmeros-core
+  acpi-support acpid apturl apturl-common attr berkeley-abc branding-ubuntu
+  bridge-utils cheese-common fonts-kacst fonts-kacst-one fonts-khmeros-core
   fonts-lao fonts-lklug-sinhala fonts-sil-abyssinica fonts-sil-padauk
   fonts-thai-tlwg fonts-tibetan-machine fonts-tlwg-garuda
   fonts-tlwg-garuda-ttf fonts-tlwg-kinnari fonts-tlwg-kinnari-ttf
@@ -225,61 +172,48 @@ man-db (2.12.0-4build2) のトリガを処理しています ...
   gir1.2-gweather-3.0 gir1.2-javascriptcoregtk-4.0 gir1.2-json-1.0
   gir1.2-nma-1.0 gir1.2-snapd-1 gir1.2-soup-2.4 gir1.2-webkit2-4.0
   gnome-bluetooth gnome-bluetooth-common gnome-mahjongg gnome-mines
-  gnome-sudoku gnuplot-data gnuplot-qt gstreamer1.0-clutter-3.0 guile-2.2-libs
-  irqbalance java-common libabsl20210324 libaec0 libamd-comgr2 libamd2 libamd3
-  libamdhip64-5 libappstream4 libarpack2t64 libatk1.0-data libatkmm-1.6-1v5
+  gnome-sudoku gstreamer1.0-clutter-3.0 guile-2.2-libs irqbalance
+  libabsl20210324 libamd2 libappstream4 libatk1.0-data libatkmm-1.6-1v5
   libblockdev-crypto2 libblockdev-fs2 libblockdev-loop2 libblockdev-part-err2
   libblockdev-part2 libblockdev-swap2 libblockdev-utils2 libblockdev2
   libboost-filesystem1.74.0 libboost-iostreams1.74.0 libboost-locale1.74.0
-  libboost-regex1.74.0 libboost-thread1.74.0 libbpf0 libbtf1 libbtf2
-  libcairomm-1.0-1v5 libcamd2 libcamd3 libcamel-1.2-63 libcbor0.8 libccolamd2
-  libccolamd3 libcephfs2 libcheese-gtk25 libcheese8 libcholmod3 libcholmod5
-  libclutter-1.0-0 libclutter-1.0-common libclutter-gst-3.0-0
-  libclutter-gtk-1.0-0 libcogl-common libcogl-pango20 libcogl-path20 libcogl20
-  libcolamd2 libcolord-gtk1t64 libcupsfilters1 libcxsparse3 libcxsparse4
-  libdav1d5 libdazzle-1.0-0 libdazzle-common libdmapsharing-3.0-2
-  libdns-export1110 libebackend-1.2-10 libebook-1.2-20 libebook-contacts-1.2-3
-  libecal-2.0-1 libedata-book-1.2-26 libedata-cal-2.0-1 libedataserver-1.2-26
-  libedataserverui-1.2-3 libemf1 libevent-core-2.1-7t64
-  libevent-pthreads-2.1-7t64 libfabric1 libflac8 libfltk-gl1.3t64
-  libfltk1.3t64 libfontembed1 libfreerdp-client2-2t64 libfreerdp-server2-2t64
+  libboost-regex1.74.0 libboost-thread1.74.0 libbpf0 libbtf1
+  libcairomm-1.0-1v5 libcamd2 libcamel-1.2-63 libcbor0.8 libccolamd2
+  libcephfs2 libcheese-gtk25 libcheese8 libcholmod3 libclutter-1.0-0
+  libclutter-1.0-common libclutter-gst-3.0-0 libclutter-gtk-1.0-0
+  libcogl-common libcogl-pango20 libcogl-path20 libcogl20 libcolamd2
+  libcolord-gtk1t64 libcupsfilters1 libcxsparse3 libdav1d5 libdazzle-1.0-0
+  libdazzle-common libdmapsharing-3.0-2 libdns-export1110 libebackend-1.2-10
+  libebook-1.2-20 libebook-contacts-1.2-3 libecal-2.0-1 libedata-book-1.2-26
+  libedata-cal-2.0-1 libedataserver-1.2-26 libedataserverui-1.2-3 libflac8
+  libfontembed1 libfreerdp-client2-2t64 libfreerdp-server2-2t64
   libfreerdp2-2t64 libgamin0 libgc1 libgcab-1.0-0 libgeocode-glib0
-  libgl1-amber-dri libgl2ps1.4 libglapi-amber libglibmm-2.4-1t64 libglpk40
-  libgnat-10 libgnome-bluetooth13t64 libgnome-games-support-1-3
-  libgnome-games-support-common libgoa-backend-1.0-1
-  libgraphicsmagick++-q16-12t64 libgssdp-1.2-0 libgtkmm-3.0-1t64
-  libgtksourceview-4-0 libgtksourceview-4-common libgupnp-1.2-1
-  libgweather-3-16 libgweather-common libhdf5-103-1t64 libhsa-runtime64-1
-  libhsakmt1 libhwloc-plugins libhwloc15 libicu70 libisc-export1105
-  libjavascriptcoregtk-4.0-18 libkf5idletime5 libklu1 libklu2 libldap-2.5-0
-  libllvm13 libllvm15t64 libllvm17t64 liblua5.2-0 liblua5.3-0
+  libgl1-amber-dri libglapi-amber libglibmm-2.4-1t64 libgnat-10
+  libgnome-bluetooth13t64 libgnome-games-support-1-3
+  libgnome-games-support-common libgoa-backend-1.0-1 libgssdp-1.2-0
+  libgtkmm-3.0-1t64 libgtksourceview-4-0 libgtksourceview-4-common
+  libgupnp-1.2-1 libgweather-3-16 libgweather-common libicu70
+  libisc-export1105 libjavascriptcoregtk-4.0-18 libkf5idletime5 libklu1
+  libldap-2.5-0 libllvm13 libllvm15t64 liblua5.2-0 liblua5.3-0
   libmagick++-6.q16-8 libmagickcore-6.q16-6 libmagickwand-6.q16-6
-  libmessaging-menu0 libmetis5 libmozjs-91-0 libnautilus-extension1a
-  libnetplan0 libnfs13 libnsl-dev libopenblas0 liborcus-0.17-0
-  liborcus-parser-0.17-0 libpangomm-1.4-1v5 libparted-fs-resize0t64
-  libpcre16-3 libpcre3 libpcre3-dev libpcre32-3 libpcrecpp0v5 libperl5.34
-  libplist3 libplot2c2 libpoppler118 libprotobuf23 libpsm-infinipath1
-  libpsm2-2 libpstoedit0t64 libpython3.10-dev libqhull-r8.0 libqhull8.0
-  libqpdf28 libqqwing2v5 libqrupdate1 libqscintilla2-qt5-15
-  libqscintilla2-qt5-l10n libqt5help5 librados2 libraw20 librdmacm1t64
+  libmessaging-menu0 libmozjs-91-0 libnautilus-extension1a libnetplan0
+  libnfs13 libnsl-dev liborcus-0.17-0 liborcus-parser-0.17-0
+  libpangomm-1.4-1v5 libparted-fs-resize0t64 libpcre16-3 libpcre3 libpcre3-dev
+  libpcre32-3 libpcrecpp0v5 libperl5.34 libplist3 libpoppler118 libprotobuf23
+  libpython3.10-dev libqhull8.0 libqpdf28 libqqwing2v5 librados2 libraw20
   libreoffice-pdfimport librest-0.7-0 libruby3.0 librygel-core-2.6-2
   librygel-db-2.6-2 librygel-renderer-2.6-2 librygel-server-2.6-2
-  libscotch-6.1 libscotch-7.0 libsigc++-2.0-0v5 libslicot0 libsmbios-c2
-  libsnapd-glib1 libsoup-gnome-2.4-1 libspqr4 libstdc++-11-dev
-  libsuitesparseconfig5 libsundials-ida4 libsundials-ida6
-  libsundials-nvecserial4 libsundials-sunmatrix2 libsundials-sunmatrix4
-  libsuperlu5 libsuperlu6 libsz2 libtext-unidecode-perl libtiff5 libtiffxx5
-  libtirpc-dev libtrilinos-kokkos-13.2 libtrilinos-trilinosss-13.2 libucx0
-  libumfpack5 libumfpack6 libunistring2 liburing2 libvncserver1 libvpx7
-  libwebkit2gtk-4.0-37 libwinpr2-2t64 libwxbase3.0-0v5 libwxbase3.2-1t64
-  libwxgtk3.0-gtk3-0v5 libwxgtk3.2-1t64 libxnvctrl0 libzip4t64 nautilus-share
-  octave-common octave-doc openjdk-11-jre-headless openjdk-21-jre-headless
-  openmpi-common perl-modules-5.34 pigz pkg-config pstoedit python3-future
-  python3-lib2to3 python3-lockfile python3-macaroonbakery python3-netifaces
-  python3-pip-whl python3-protobuf python3-pyatspi python3-pymacaroons
-  python3-rfc3339 python3-setuptools-whl python3.10 python3.10-dev
-  python3.10-minimal ruby3.0 runc samba samba-ad-provision samba-vfs-modules
-  tdb-tools tex-common texinfo texinfo-lib ubuntu-advantage-tools ubuntu-fan
+  libscotch-6.1 libsigc++-2.0-0v5 libsmbios-c2 libsnapd-glib1
+  libsoup-gnome-2.4-1 libstdc++-11-dev libsuitesparseconfig5 libsundials-ida4
+  libsundials-nvecserial4 libsundials-sunmatrix2 libsuperlu5 libtiff5
+  libtiffxx5 libtirpc-dev libumfpack5 libunistring2 liburing2 libvncserver1
+  libvpx7 libwebkit2gtk-4.0-37 libwinpr2-2t64 libwxbase3.0-0v5
+  libwxgtk3.0-gtk3-0v5 nautilus-share openjdk-11-jre-headless
+  perl-modules-5.34 pkg-config python3-future python3-lib2to3 python3-lockfile
+  python3-macaroonbakery python3-netifaces python3-protobuf python3-pyatspi
+  python3-pymacaroons python3-rfc3339 python3.10 python3.10-dev
+  python3.10-minimal ruby3.0 samba samba-ad-provision samba-vfs-modules
+  tdb-tools ubuntu-advantage-tools ubuntu-fan
 これを削除するには 'sudo apt autoremove' を利用してください。
 アップグレード: 0 個、新規インストール: 0 個、削除: 0 個、保留: 7 個。
 パッケージリストを読み込んでいます... 完了
@@ -287,9 +221,8 @@ man-db (2.12.0-4build2) のトリガを処理しています ...
 状態情報を読み取っています... 完了        
 パッケージ 'docker-compose' はインストールされていないため削除もされません
 以下のパッケージが自動でインストールされましたが、もう必要とされていません:
-  acpi-support acpid aglfn apturl apturl-common attr berkeley-abc
-  branding-ubuntu bridge-utils ca-certificates-java cheese-common containerd
-  default-jre-headless epstool fonts-kacst fonts-kacst-one fonts-khmeros-core
+  acpi-support acpid apturl apturl-common attr berkeley-abc branding-ubuntu
+  bridge-utils cheese-common fonts-kacst fonts-kacst-one fonts-khmeros-core
   fonts-lao fonts-lklug-sinhala fonts-sil-abyssinica fonts-sil-padauk
   fonts-thai-tlwg fonts-tibetan-machine fonts-tlwg-garuda
   fonts-tlwg-garuda-ttf fonts-tlwg-kinnari fonts-tlwg-kinnari-ttf
@@ -304,61 +237,48 @@ man-db (2.12.0-4build2) のトリガを処理しています ...
   gir1.2-gweather-3.0 gir1.2-javascriptcoregtk-4.0 gir1.2-json-1.0
   gir1.2-nma-1.0 gir1.2-snapd-1 gir1.2-soup-2.4 gir1.2-webkit2-4.0
   gnome-bluetooth gnome-bluetooth-common gnome-mahjongg gnome-mines
-  gnome-sudoku gnuplot-data gnuplot-qt gstreamer1.0-clutter-3.0 guile-2.2-libs
-  irqbalance java-common libabsl20210324 libaec0 libamd-comgr2 libamd2 libamd3
-  libamdhip64-5 libappstream4 libarpack2t64 libatk1.0-data libatkmm-1.6-1v5
+  gnome-sudoku gstreamer1.0-clutter-3.0 guile-2.2-libs irqbalance
+  libabsl20210324 libamd2 libappstream4 libatk1.0-data libatkmm-1.6-1v5
   libblockdev-crypto2 libblockdev-fs2 libblockdev-loop2 libblockdev-part-err2
   libblockdev-part2 libblockdev-swap2 libblockdev-utils2 libblockdev2
   libboost-filesystem1.74.0 libboost-iostreams1.74.0 libboost-locale1.74.0
-  libboost-regex1.74.0 libboost-thread1.74.0 libbpf0 libbtf1 libbtf2
-  libcairomm-1.0-1v5 libcamd2 libcamd3 libcamel-1.2-63 libcbor0.8 libccolamd2
-  libccolamd3 libcephfs2 libcheese-gtk25 libcheese8 libcholmod3 libcholmod5
-  libclutter-1.0-0 libclutter-1.0-common libclutter-gst-3.0-0
-  libclutter-gtk-1.0-0 libcogl-common libcogl-pango20 libcogl-path20 libcogl20
-  libcolamd2 libcolord-gtk1t64 libcupsfilters1 libcxsparse3 libcxsparse4
-  libdav1d5 libdazzle-1.0-0 libdazzle-common libdmapsharing-3.0-2
-  libdns-export1110 libebackend-1.2-10 libebook-1.2-20 libebook-contacts-1.2-3
-  libecal-2.0-1 libedata-book-1.2-26 libedata-cal-2.0-1 libedataserver-1.2-26
-  libedataserverui-1.2-3 libemf1 libevent-core-2.1-7t64
-  libevent-pthreads-2.1-7t64 libfabric1 libflac8 libfltk-gl1.3t64
-  libfltk1.3t64 libfontembed1 libfreerdp-client2-2t64 libfreerdp-server2-2t64
+  libboost-regex1.74.0 libboost-thread1.74.0 libbpf0 libbtf1
+  libcairomm-1.0-1v5 libcamd2 libcamel-1.2-63 libcbor0.8 libccolamd2
+  libcephfs2 libcheese-gtk25 libcheese8 libcholmod3 libclutter-1.0-0
+  libclutter-1.0-common libclutter-gst-3.0-0 libclutter-gtk-1.0-0
+  libcogl-common libcogl-pango20 libcogl-path20 libcogl20 libcolamd2
+  libcolord-gtk1t64 libcupsfilters1 libcxsparse3 libdav1d5 libdazzle-1.0-0
+  libdazzle-common libdmapsharing-3.0-2 libdns-export1110 libebackend-1.2-10
+  libebook-1.2-20 libebook-contacts-1.2-3 libecal-2.0-1 libedata-book-1.2-26
+  libedata-cal-2.0-1 libedataserver-1.2-26 libedataserverui-1.2-3 libflac8
+  libfontembed1 libfreerdp-client2-2t64 libfreerdp-server2-2t64
   libfreerdp2-2t64 libgamin0 libgc1 libgcab-1.0-0 libgeocode-glib0
-  libgl1-amber-dri libgl2ps1.4 libglapi-amber libglibmm-2.4-1t64 libglpk40
-  libgnat-10 libgnome-bluetooth13t64 libgnome-games-support-1-3
-  libgnome-games-support-common libgoa-backend-1.0-1
-  libgraphicsmagick++-q16-12t64 libgssdp-1.2-0 libgtkmm-3.0-1t64
-  libgtksourceview-4-0 libgtksourceview-4-common libgupnp-1.2-1
-  libgweather-3-16 libgweather-common libhdf5-103-1t64 libhsa-runtime64-1
-  libhsakmt1 libhwloc-plugins libhwloc15 libicu70 libisc-export1105
-  libjavascriptcoregtk-4.0-18 libkf5idletime5 libklu1 libklu2 libldap-2.5-0
-  libllvm13 libllvm15t64 libllvm17t64 liblua5.2-0 liblua5.3-0
+  libgl1-amber-dri libglapi-amber libglibmm-2.4-1t64 libgnat-10
+  libgnome-bluetooth13t64 libgnome-games-support-1-3
+  libgnome-games-support-common libgoa-backend-1.0-1 libgssdp-1.2-0
+  libgtkmm-3.0-1t64 libgtksourceview-4-0 libgtksourceview-4-common
+  libgupnp-1.2-1 libgweather-3-16 libgweather-common libicu70
+  libisc-export1105 libjavascriptcoregtk-4.0-18 libkf5idletime5 libklu1
+  libldap-2.5-0 libllvm13 libllvm15t64 liblua5.2-0 liblua5.3-0
   libmagick++-6.q16-8 libmagickcore-6.q16-6 libmagickwand-6.q16-6
-  libmessaging-menu0 libmetis5 libmozjs-91-0 libnautilus-extension1a
-  libnetplan0 libnfs13 libnsl-dev libopenblas0 liborcus-0.17-0
-  liborcus-parser-0.17-0 libpangomm-1.4-1v5 libparted-fs-resize0t64
-  libpcre16-3 libpcre3 libpcre3-dev libpcre32-3 libpcrecpp0v5 libperl5.34
-  libplist3 libplot2c2 libpoppler118 libprotobuf23 libpsm-infinipath1
-  libpsm2-2 libpstoedit0t64 libpython3.10-dev libqhull-r8.0 libqhull8.0
-  libqpdf28 libqqwing2v5 libqrupdate1 libqscintilla2-qt5-15
-  libqscintilla2-qt5-l10n libqt5help5 librados2 libraw20 librdmacm1t64
+  libmessaging-menu0 libmozjs-91-0 libnautilus-extension1a libnetplan0
+  libnfs13 libnsl-dev liborcus-0.17-0 liborcus-parser-0.17-0
+  libpangomm-1.4-1v5 libparted-fs-resize0t64 libpcre16-3 libpcre3 libpcre3-dev
+  libpcre32-3 libpcrecpp0v5 libperl5.34 libplist3 libpoppler118 libprotobuf23
+  libpython3.10-dev libqhull8.0 libqpdf28 libqqwing2v5 librados2 libraw20
   libreoffice-pdfimport librest-0.7-0 libruby3.0 librygel-core-2.6-2
   librygel-db-2.6-2 librygel-renderer-2.6-2 librygel-server-2.6-2
-  libscotch-6.1 libscotch-7.0 libsigc++-2.0-0v5 libslicot0 libsmbios-c2
-  libsnapd-glib1 libsoup-gnome-2.4-1 libspqr4 libstdc++-11-dev
-  libsuitesparseconfig5 libsundials-ida4 libsundials-ida6
-  libsundials-nvecserial4 libsundials-sunmatrix2 libsundials-sunmatrix4
-  libsuperlu5 libsuperlu6 libsz2 libtext-unidecode-perl libtiff5 libtiffxx5
-  libtirpc-dev libtrilinos-kokkos-13.2 libtrilinos-trilinosss-13.2 libucx0
-  libumfpack5 libumfpack6 libunistring2 liburing2 libvncserver1 libvpx7
-  libwebkit2gtk-4.0-37 libwinpr2-2t64 libwxbase3.0-0v5 libwxbase3.2-1t64
-  libwxgtk3.0-gtk3-0v5 libwxgtk3.2-1t64 libxnvctrl0 libzip4t64 nautilus-share
-  octave-common octave-doc openjdk-11-jre-headless openjdk-21-jre-headless
-  openmpi-common perl-modules-5.34 pigz pkg-config pstoedit python3-future
-  python3-lib2to3 python3-lockfile python3-macaroonbakery python3-netifaces
-  python3-pip-whl python3-protobuf python3-pyatspi python3-pymacaroons
-  python3-rfc3339 python3-setuptools-whl python3.10 python3.10-dev
-  python3.10-minimal ruby3.0 runc samba samba-ad-provision samba-vfs-modules
-  tdb-tools tex-common texinfo texinfo-lib ubuntu-advantage-tools ubuntu-fan
+  libscotch-6.1 libsigc++-2.0-0v5 libsmbios-c2 libsnapd-glib1
+  libsoup-gnome-2.4-1 libstdc++-11-dev libsuitesparseconfig5 libsundials-ida4
+  libsundials-nvecserial4 libsundials-sunmatrix2 libsuperlu5 libtiff5
+  libtiffxx5 libtirpc-dev libumfpack5 libunistring2 liburing2 libvncserver1
+  libvpx7 libwebkit2gtk-4.0-37 libwinpr2-2t64 libwxbase3.0-0v5
+  libwxgtk3.0-gtk3-0v5 nautilus-share openjdk-11-jre-headless
+  perl-modules-5.34 pkg-config python3-future python3-lib2to3 python3-lockfile
+  python3-macaroonbakery python3-netifaces python3-protobuf python3-pyatspi
+  python3-pymacaroons python3-rfc3339 python3.10 python3.10-dev
+  python3.10-minimal ruby3.0 samba samba-ad-provision samba-vfs-modules
+  tdb-tools ubuntu-advantage-tools ubuntu-fan
 これを削除するには 'sudo apt autoremove' を利用してください。
 アップグレード: 0 個、新規インストール: 0 個、削除: 0 個、保留: 7 個。
 パッケージリストを読み込んでいます... 完了
@@ -366,9 +286,8 @@ man-db (2.12.0-4build2) のトリガを処理しています ...
 状態情報を読み取っています... 完了        
 パッケージ 'docker-compose-v2' はインストールされていないため削除もされません
 以下のパッケージが自動でインストールされましたが、もう必要とされていません:
-  acpi-support acpid aglfn apturl apturl-common attr berkeley-abc
-  branding-ubuntu bridge-utils ca-certificates-java cheese-common containerd
-  default-jre-headless epstool fonts-kacst fonts-kacst-one fonts-khmeros-core
+  acpi-support acpid apturl apturl-common attr berkeley-abc branding-ubuntu
+  bridge-utils cheese-common fonts-kacst fonts-kacst-one fonts-khmeros-core
   fonts-lao fonts-lklug-sinhala fonts-sil-abyssinica fonts-sil-padauk
   fonts-thai-tlwg fonts-tibetan-machine fonts-tlwg-garuda
   fonts-tlwg-garuda-ttf fonts-tlwg-kinnari fonts-tlwg-kinnari-ttf
@@ -383,61 +302,48 @@ man-db (2.12.0-4build2) のトリガを処理しています ...
   gir1.2-gweather-3.0 gir1.2-javascriptcoregtk-4.0 gir1.2-json-1.0
   gir1.2-nma-1.0 gir1.2-snapd-1 gir1.2-soup-2.4 gir1.2-webkit2-4.0
   gnome-bluetooth gnome-bluetooth-common gnome-mahjongg gnome-mines
-  gnome-sudoku gnuplot-data gnuplot-qt gstreamer1.0-clutter-3.0 guile-2.2-libs
-  irqbalance java-common libabsl20210324 libaec0 libamd-comgr2 libamd2 libamd3
-  libamdhip64-5 libappstream4 libarpack2t64 libatk1.0-data libatkmm-1.6-1v5
+  gnome-sudoku gstreamer1.0-clutter-3.0 guile-2.2-libs irqbalance
+  libabsl20210324 libamd2 libappstream4 libatk1.0-data libatkmm-1.6-1v5
   libblockdev-crypto2 libblockdev-fs2 libblockdev-loop2 libblockdev-part-err2
   libblockdev-part2 libblockdev-swap2 libblockdev-utils2 libblockdev2
   libboost-filesystem1.74.0 libboost-iostreams1.74.0 libboost-locale1.74.0
-  libboost-regex1.74.0 libboost-thread1.74.0 libbpf0 libbtf1 libbtf2
-  libcairomm-1.0-1v5 libcamd2 libcamd3 libcamel-1.2-63 libcbor0.8 libccolamd2
-  libccolamd3 libcephfs2 libcheese-gtk25 libcheese8 libcholmod3 libcholmod5
-  libclutter-1.0-0 libclutter-1.0-common libclutter-gst-3.0-0
-  libclutter-gtk-1.0-0 libcogl-common libcogl-pango20 libcogl-path20 libcogl20
-  libcolamd2 libcolord-gtk1t64 libcupsfilters1 libcxsparse3 libcxsparse4
-  libdav1d5 libdazzle-1.0-0 libdazzle-common libdmapsharing-3.0-2
-  libdns-export1110 libebackend-1.2-10 libebook-1.2-20 libebook-contacts-1.2-3
-  libecal-2.0-1 libedata-book-1.2-26 libedata-cal-2.0-1 libedataserver-1.2-26
-  libedataserverui-1.2-3 libemf1 libevent-core-2.1-7t64
-  libevent-pthreads-2.1-7t64 libfabric1 libflac8 libfltk-gl1.3t64
-  libfltk1.3t64 libfontembed1 libfreerdp-client2-2t64 libfreerdp-server2-2t64
+  libboost-regex1.74.0 libboost-thread1.74.0 libbpf0 libbtf1
+  libcairomm-1.0-1v5 libcamd2 libcamel-1.2-63 libcbor0.8 libccolamd2
+  libcephfs2 libcheese-gtk25 libcheese8 libcholmod3 libclutter-1.0-0
+  libclutter-1.0-common libclutter-gst-3.0-0 libclutter-gtk-1.0-0
+  libcogl-common libcogl-pango20 libcogl-path20 libcogl20 libcolamd2
+  libcolord-gtk1t64 libcupsfilters1 libcxsparse3 libdav1d5 libdazzle-1.0-0
+  libdazzle-common libdmapsharing-3.0-2 libdns-export1110 libebackend-1.2-10
+  libebook-1.2-20 libebook-contacts-1.2-3 libecal-2.0-1 libedata-book-1.2-26
+  libedata-cal-2.0-1 libedataserver-1.2-26 libedataserverui-1.2-3 libflac8
+  libfontembed1 libfreerdp-client2-2t64 libfreerdp-server2-2t64
   libfreerdp2-2t64 libgamin0 libgc1 libgcab-1.0-0 libgeocode-glib0
-  libgl1-amber-dri libgl2ps1.4 libglapi-amber libglibmm-2.4-1t64 libglpk40
-  libgnat-10 libgnome-bluetooth13t64 libgnome-games-support-1-3
-  libgnome-games-support-common libgoa-backend-1.0-1
-  libgraphicsmagick++-q16-12t64 libgssdp-1.2-0 libgtkmm-3.0-1t64
-  libgtksourceview-4-0 libgtksourceview-4-common libgupnp-1.2-1
-  libgweather-3-16 libgweather-common libhdf5-103-1t64 libhsa-runtime64-1
-  libhsakmt1 libhwloc-plugins libhwloc15 libicu70 libisc-export1105
-  libjavascriptcoregtk-4.0-18 libkf5idletime5 libklu1 libklu2 libldap-2.5-0
-  libllvm13 libllvm15t64 libllvm17t64 liblua5.2-0 liblua5.3-0
+  libgl1-amber-dri libglapi-amber libglibmm-2.4-1t64 libgnat-10
+  libgnome-bluetooth13t64 libgnome-games-support-1-3
+  libgnome-games-support-common libgoa-backend-1.0-1 libgssdp-1.2-0
+  libgtkmm-3.0-1t64 libgtksourceview-4-0 libgtksourceview-4-common
+  libgupnp-1.2-1 libgweather-3-16 libgweather-common libicu70
+  libisc-export1105 libjavascriptcoregtk-4.0-18 libkf5idletime5 libklu1
+  libldap-2.5-0 libllvm13 libllvm15t64 liblua5.2-0 liblua5.3-0
   libmagick++-6.q16-8 libmagickcore-6.q16-6 libmagickwand-6.q16-6
-  libmessaging-menu0 libmetis5 libmozjs-91-0 libnautilus-extension1a
-  libnetplan0 libnfs13 libnsl-dev libopenblas0 liborcus-0.17-0
-  liborcus-parser-0.17-0 libpangomm-1.4-1v5 libparted-fs-resize0t64
-  libpcre16-3 libpcre3 libpcre3-dev libpcre32-3 libpcrecpp0v5 libperl5.34
-  libplist3 libplot2c2 libpoppler118 libprotobuf23 libpsm-infinipath1
-  libpsm2-2 libpstoedit0t64 libpython3.10-dev libqhull-r8.0 libqhull8.0
-  libqpdf28 libqqwing2v5 libqrupdate1 libqscintilla2-qt5-15
-  libqscintilla2-qt5-l10n libqt5help5 librados2 libraw20 librdmacm1t64
+  libmessaging-menu0 libmozjs-91-0 libnautilus-extension1a libnetplan0
+  libnfs13 libnsl-dev liborcus-0.17-0 liborcus-parser-0.17-0
+  libpangomm-1.4-1v5 libparted-fs-resize0t64 libpcre16-3 libpcre3 libpcre3-dev
+  libpcre32-3 libpcrecpp0v5 libperl5.34 libplist3 libpoppler118 libprotobuf23
+  libpython3.10-dev libqhull8.0 libqpdf28 libqqwing2v5 librados2 libraw20
   libreoffice-pdfimport librest-0.7-0 libruby3.0 librygel-core-2.6-2
   librygel-db-2.6-2 librygel-renderer-2.6-2 librygel-server-2.6-2
-  libscotch-6.1 libscotch-7.0 libsigc++-2.0-0v5 libslicot0 libsmbios-c2
-  libsnapd-glib1 libsoup-gnome-2.4-1 libspqr4 libstdc++-11-dev
-  libsuitesparseconfig5 libsundials-ida4 libsundials-ida6
-  libsundials-nvecserial4 libsundials-sunmatrix2 libsundials-sunmatrix4
-  libsuperlu5 libsuperlu6 libsz2 libtext-unidecode-perl libtiff5 libtiffxx5
-  libtirpc-dev libtrilinos-kokkos-13.2 libtrilinos-trilinosss-13.2 libucx0
-  libumfpack5 libumfpack6 libunistring2 liburing2 libvncserver1 libvpx7
-  libwebkit2gtk-4.0-37 libwinpr2-2t64 libwxbase3.0-0v5 libwxbase3.2-1t64
-  libwxgtk3.0-gtk3-0v5 libwxgtk3.2-1t64 libxnvctrl0 libzip4t64 nautilus-share
-  octave-common octave-doc openjdk-11-jre-headless openjdk-21-jre-headless
-  openmpi-common perl-modules-5.34 pigz pkg-config pstoedit python3-future
-  python3-lib2to3 python3-lockfile python3-macaroonbakery python3-netifaces
-  python3-pip-whl python3-protobuf python3-pyatspi python3-pymacaroons
-  python3-rfc3339 python3-setuptools-whl python3.10 python3.10-dev
-  python3.10-minimal ruby3.0 runc samba samba-ad-provision samba-vfs-modules
-  tdb-tools tex-common texinfo texinfo-lib ubuntu-advantage-tools ubuntu-fan
+  libscotch-6.1 libsigc++-2.0-0v5 libsmbios-c2 libsnapd-glib1
+  libsoup-gnome-2.4-1 libstdc++-11-dev libsuitesparseconfig5 libsundials-ida4
+  libsundials-nvecserial4 libsundials-sunmatrix2 libsuperlu5 libtiff5
+  libtiffxx5 libtirpc-dev libumfpack5 libunistring2 liburing2 libvncserver1
+  libvpx7 libwebkit2gtk-4.0-37 libwinpr2-2t64 libwxbase3.0-0v5
+  libwxgtk3.0-gtk3-0v5 nautilus-share openjdk-11-jre-headless
+  perl-modules-5.34 pkg-config python3-future python3-lib2to3 python3-lockfile
+  python3-macaroonbakery python3-netifaces python3-protobuf python3-pyatspi
+  python3-pymacaroons python3-rfc3339 python3.10 python3.10-dev
+  python3.10-minimal ruby3.0 samba samba-ad-provision samba-vfs-modules
+  tdb-tools ubuntu-advantage-tools ubuntu-fan
 これを削除するには 'sudo apt autoremove' を利用してください。
 アップグレード: 0 個、新規インストール: 0 個、削除: 0 個、保留: 7 個。
 パッケージリストを読み込んでいます... 完了
@@ -445,9 +351,8 @@ man-db (2.12.0-4build2) のトリガを処理しています ...
 状態情報を読み取っています... 完了        
 パッケージ 'podman-docker' はインストールされていないため削除もされません
 以下のパッケージが自動でインストールされましたが、もう必要とされていません:
-  acpi-support acpid aglfn apturl apturl-common attr berkeley-abc
-  branding-ubuntu bridge-utils ca-certificates-java cheese-common containerd
-  default-jre-headless epstool fonts-kacst fonts-kacst-one fonts-khmeros-core
+  acpi-support acpid apturl apturl-common attr berkeley-abc branding-ubuntu
+  bridge-utils cheese-common fonts-kacst fonts-kacst-one fonts-khmeros-core
   fonts-lao fonts-lklug-sinhala fonts-sil-abyssinica fonts-sil-padauk
   fonts-thai-tlwg fonts-tibetan-machine fonts-tlwg-garuda
   fonts-tlwg-garuda-ttf fonts-tlwg-kinnari fonts-tlwg-kinnari-ttf
@@ -462,70 +367,57 @@ man-db (2.12.0-4build2) のトリガを処理しています ...
   gir1.2-gweather-3.0 gir1.2-javascriptcoregtk-4.0 gir1.2-json-1.0
   gir1.2-nma-1.0 gir1.2-snapd-1 gir1.2-soup-2.4 gir1.2-webkit2-4.0
   gnome-bluetooth gnome-bluetooth-common gnome-mahjongg gnome-mines
-  gnome-sudoku gnuplot-data gnuplot-qt gstreamer1.0-clutter-3.0 guile-2.2-libs
-  irqbalance java-common libabsl20210324 libaec0 libamd-comgr2 libamd2 libamd3
-  libamdhip64-5 libappstream4 libarpack2t64 libatk1.0-data libatkmm-1.6-1v5
+  gnome-sudoku gstreamer1.0-clutter-3.0 guile-2.2-libs irqbalance
+  libabsl20210324 libamd2 libappstream4 libatk1.0-data libatkmm-1.6-1v5
   libblockdev-crypto2 libblockdev-fs2 libblockdev-loop2 libblockdev-part-err2
   libblockdev-part2 libblockdev-swap2 libblockdev-utils2 libblockdev2
   libboost-filesystem1.74.0 libboost-iostreams1.74.0 libboost-locale1.74.0
-  libboost-regex1.74.0 libboost-thread1.74.0 libbpf0 libbtf1 libbtf2
-  libcairomm-1.0-1v5 libcamd2 libcamd3 libcamel-1.2-63 libcbor0.8 libccolamd2
-  libccolamd3 libcephfs2 libcheese-gtk25 libcheese8 libcholmod3 libcholmod5
-  libclutter-1.0-0 libclutter-1.0-common libclutter-gst-3.0-0
-  libclutter-gtk-1.0-0 libcogl-common libcogl-pango20 libcogl-path20 libcogl20
-  libcolamd2 libcolord-gtk1t64 libcupsfilters1 libcxsparse3 libcxsparse4
-  libdav1d5 libdazzle-1.0-0 libdazzle-common libdmapsharing-3.0-2
-  libdns-export1110 libebackend-1.2-10 libebook-1.2-20 libebook-contacts-1.2-3
-  libecal-2.0-1 libedata-book-1.2-26 libedata-cal-2.0-1 libedataserver-1.2-26
-  libedataserverui-1.2-3 libemf1 libevent-core-2.1-7t64
-  libevent-pthreads-2.1-7t64 libfabric1 libflac8 libfltk-gl1.3t64
-  libfltk1.3t64 libfontembed1 libfreerdp-client2-2t64 libfreerdp-server2-2t64
+  libboost-regex1.74.0 libboost-thread1.74.0 libbpf0 libbtf1
+  libcairomm-1.0-1v5 libcamd2 libcamel-1.2-63 libcbor0.8 libccolamd2
+  libcephfs2 libcheese-gtk25 libcheese8 libcholmod3 libclutter-1.0-0
+  libclutter-1.0-common libclutter-gst-3.0-0 libclutter-gtk-1.0-0
+  libcogl-common libcogl-pango20 libcogl-path20 libcogl20 libcolamd2
+  libcolord-gtk1t64 libcupsfilters1 libcxsparse3 libdav1d5 libdazzle-1.0-0
+  libdazzle-common libdmapsharing-3.0-2 libdns-export1110 libebackend-1.2-10
+  libebook-1.2-20 libebook-contacts-1.2-3 libecal-2.0-1 libedata-book-1.2-26
+  libedata-cal-2.0-1 libedataserver-1.2-26 libedataserverui-1.2-3 libflac8
+  libfontembed1 libfreerdp-client2-2t64 libfreerdp-server2-2t64
   libfreerdp2-2t64 libgamin0 libgc1 libgcab-1.0-0 libgeocode-glib0
-  libgl1-amber-dri libgl2ps1.4 libglapi-amber libglibmm-2.4-1t64 libglpk40
-  libgnat-10 libgnome-bluetooth13t64 libgnome-games-support-1-3
-  libgnome-games-support-common libgoa-backend-1.0-1
-  libgraphicsmagick++-q16-12t64 libgssdp-1.2-0 libgtkmm-3.0-1t64
-  libgtksourceview-4-0 libgtksourceview-4-common libgupnp-1.2-1
-  libgweather-3-16 libgweather-common libhdf5-103-1t64 libhsa-runtime64-1
-  libhsakmt1 libhwloc-plugins libhwloc15 libicu70 libisc-export1105
-  libjavascriptcoregtk-4.0-18 libkf5idletime5 libklu1 libklu2 libldap-2.5-0
-  libllvm13 libllvm15t64 libllvm17t64 liblua5.2-0 liblua5.3-0
+  libgl1-amber-dri libglapi-amber libglibmm-2.4-1t64 libgnat-10
+  libgnome-bluetooth13t64 libgnome-games-support-1-3
+  libgnome-games-support-common libgoa-backend-1.0-1 libgssdp-1.2-0
+  libgtkmm-3.0-1t64 libgtksourceview-4-0 libgtksourceview-4-common
+  libgupnp-1.2-1 libgweather-3-16 libgweather-common libicu70
+  libisc-export1105 libjavascriptcoregtk-4.0-18 libkf5idletime5 libklu1
+  libldap-2.5-0 libllvm13 libllvm15t64 liblua5.2-0 liblua5.3-0
   libmagick++-6.q16-8 libmagickcore-6.q16-6 libmagickwand-6.q16-6
-  libmessaging-menu0 libmetis5 libmozjs-91-0 libnautilus-extension1a
-  libnetplan0 libnfs13 libnsl-dev libopenblas0 liborcus-0.17-0
-  liborcus-parser-0.17-0 libpangomm-1.4-1v5 libparted-fs-resize0t64
-  libpcre16-3 libpcre3 libpcre3-dev libpcre32-3 libpcrecpp0v5 libperl5.34
-  libplist3 libplot2c2 libpoppler118 libprotobuf23 libpsm-infinipath1
-  libpsm2-2 libpstoedit0t64 libpython3.10-dev libqhull-r8.0 libqhull8.0
-  libqpdf28 libqqwing2v5 libqrupdate1 libqscintilla2-qt5-15
-  libqscintilla2-qt5-l10n libqt5help5 librados2 libraw20 librdmacm1t64
+  libmessaging-menu0 libmozjs-91-0 libnautilus-extension1a libnetplan0
+  libnfs13 libnsl-dev liborcus-0.17-0 liborcus-parser-0.17-0
+  libpangomm-1.4-1v5 libparted-fs-resize0t64 libpcre16-3 libpcre3 libpcre3-dev
+  libpcre32-3 libpcrecpp0v5 libperl5.34 libplist3 libpoppler118 libprotobuf23
+  libpython3.10-dev libqhull8.0 libqpdf28 libqqwing2v5 librados2 libraw20
   libreoffice-pdfimport librest-0.7-0 libruby3.0 librygel-core-2.6-2
   librygel-db-2.6-2 librygel-renderer-2.6-2 librygel-server-2.6-2
-  libscotch-6.1 libscotch-7.0 libsigc++-2.0-0v5 libslicot0 libsmbios-c2
-  libsnapd-glib1 libsoup-gnome-2.4-1 libspqr4 libstdc++-11-dev
-  libsuitesparseconfig5 libsundials-ida4 libsundials-ida6
-  libsundials-nvecserial4 libsundials-sunmatrix2 libsundials-sunmatrix4
-  libsuperlu5 libsuperlu6 libsz2 libtext-unidecode-perl libtiff5 libtiffxx5
-  libtirpc-dev libtrilinos-kokkos-13.2 libtrilinos-trilinosss-13.2 libucx0
-  libumfpack5 libumfpack6 libunistring2 liburing2 libvncserver1 libvpx7
-  libwebkit2gtk-4.0-37 libwinpr2-2t64 libwxbase3.0-0v5 libwxbase3.2-1t64
-  libwxgtk3.0-gtk3-0v5 libwxgtk3.2-1t64 libxnvctrl0 libzip4t64 nautilus-share
-  octave-common octave-doc openjdk-11-jre-headless openjdk-21-jre-headless
-  openmpi-common perl-modules-5.34 pigz pkg-config pstoedit python3-future
-  python3-lib2to3 python3-lockfile python3-macaroonbakery python3-netifaces
-  python3-pip-whl python3-protobuf python3-pyatspi python3-pymacaroons
-  python3-rfc3339 python3-setuptools-whl python3.10 python3.10-dev
-  python3.10-minimal ruby3.0 runc samba samba-ad-provision samba-vfs-modules
-  tdb-tools tex-common texinfo texinfo-lib ubuntu-advantage-tools ubuntu-fan
+  libscotch-6.1 libsigc++-2.0-0v5 libsmbios-c2 libsnapd-glib1
+  libsoup-gnome-2.4-1 libstdc++-11-dev libsuitesparseconfig5 libsundials-ida4
+  libsundials-nvecserial4 libsundials-sunmatrix2 libsuperlu5 libtiff5
+  libtiffxx5 libtirpc-dev libumfpack5 libunistring2 liburing2 libvncserver1
+  libvpx7 libwebkit2gtk-4.0-37 libwinpr2-2t64 libwxbase3.0-0v5
+  libwxgtk3.0-gtk3-0v5 nautilus-share openjdk-11-jre-headless
+  perl-modules-5.34 pkg-config python3-future python3-lib2to3 python3-lockfile
+  python3-macaroonbakery python3-netifaces python3-protobuf python3-pyatspi
+  python3-pymacaroons python3-rfc3339 python3.10 python3.10-dev
+  python3.10-minimal ruby3.0 samba samba-ad-provision samba-vfs-modules
+  tdb-tools ubuntu-advantage-tools ubuntu-fan
 これを削除するには 'sudo apt autoremove' を利用してください。
 アップグレード: 0 個、新規インストール: 0 個、削除: 0 個、保留: 7 個。
 パッケージリストを読み込んでいます... 完了
 依存関係ツリーを作成しています... 完了        
 状態情報を読み取っています... 完了        
+パッケージ 'containerd' はインストールされていないため削除もされません
 以下のパッケージが自動でインストールされましたが、もう必要とされていません:
-  acpi-support acpid aglfn apturl apturl-common attr berkeley-abc
-  branding-ubuntu bridge-utils ca-certificates-java cheese-common
-  default-jre-headless epstool fonts-kacst fonts-kacst-one fonts-khmeros-core
+  acpi-support acpid apturl apturl-common attr berkeley-abc branding-ubuntu
+  bridge-utils cheese-common fonts-kacst fonts-kacst-one fonts-khmeros-core
   fonts-lao fonts-lklug-sinhala fonts-sil-abyssinica fonts-sil-padauk
   fonts-thai-tlwg fonts-tibetan-machine fonts-tlwg-garuda
   fonts-tlwg-garuda-ttf fonts-tlwg-kinnari fonts-tlwg-kinnari-ttf
@@ -540,76 +432,57 @@ man-db (2.12.0-4build2) のトリガを処理しています ...
   gir1.2-gweather-3.0 gir1.2-javascriptcoregtk-4.0 gir1.2-json-1.0
   gir1.2-nma-1.0 gir1.2-snapd-1 gir1.2-soup-2.4 gir1.2-webkit2-4.0
   gnome-bluetooth gnome-bluetooth-common gnome-mahjongg gnome-mines
-  gnome-sudoku gnuplot-data gnuplot-qt gstreamer1.0-clutter-3.0 guile-2.2-libs
-  irqbalance java-common libabsl20210324 libaec0 libamd-comgr2 libamd2 libamd3
-  libamdhip64-5 libappstream4 libarpack2t64 libatk1.0-data libatkmm-1.6-1v5
+  gnome-sudoku gstreamer1.0-clutter-3.0 guile-2.2-libs irqbalance
+  libabsl20210324 libamd2 libappstream4 libatk1.0-data libatkmm-1.6-1v5
   libblockdev-crypto2 libblockdev-fs2 libblockdev-loop2 libblockdev-part-err2
   libblockdev-part2 libblockdev-swap2 libblockdev-utils2 libblockdev2
   libboost-filesystem1.74.0 libboost-iostreams1.74.0 libboost-locale1.74.0
-  libboost-regex1.74.0 libboost-thread1.74.0 libbpf0 libbtf1 libbtf2
-  libcairomm-1.0-1v5 libcamd2 libcamd3 libcamel-1.2-63 libcbor0.8 libccolamd2
-  libccolamd3 libcephfs2 libcheese-gtk25 libcheese8 libcholmod3 libcholmod5
-  libclutter-1.0-0 libclutter-1.0-common libclutter-gst-3.0-0
-  libclutter-gtk-1.0-0 libcogl-common libcogl-pango20 libcogl-path20 libcogl20
-  libcolamd2 libcolord-gtk1t64 libcupsfilters1 libcxsparse3 libcxsparse4
-  libdav1d5 libdazzle-1.0-0 libdazzle-common libdmapsharing-3.0-2
-  libdns-export1110 libebackend-1.2-10 libebook-1.2-20 libebook-contacts-1.2-3
-  libecal-2.0-1 libedata-book-1.2-26 libedata-cal-2.0-1 libedataserver-1.2-26
-  libedataserverui-1.2-3 libemf1 libevent-core-2.1-7t64
-  libevent-pthreads-2.1-7t64 libfabric1 libflac8 libfltk-gl1.3t64
-  libfltk1.3t64 libfontembed1 libfreerdp-client2-2t64 libfreerdp-server2-2t64
+  libboost-regex1.74.0 libboost-thread1.74.0 libbpf0 libbtf1
+  libcairomm-1.0-1v5 libcamd2 libcamel-1.2-63 libcbor0.8 libccolamd2
+  libcephfs2 libcheese-gtk25 libcheese8 libcholmod3 libclutter-1.0-0
+  libclutter-1.0-common libclutter-gst-3.0-0 libclutter-gtk-1.0-0
+  libcogl-common libcogl-pango20 libcogl-path20 libcogl20 libcolamd2
+  libcolord-gtk1t64 libcupsfilters1 libcxsparse3 libdav1d5 libdazzle-1.0-0
+  libdazzle-common libdmapsharing-3.0-2 libdns-export1110 libebackend-1.2-10
+  libebook-1.2-20 libebook-contacts-1.2-3 libecal-2.0-1 libedata-book-1.2-26
+  libedata-cal-2.0-1 libedataserver-1.2-26 libedataserverui-1.2-3 libflac8
+  libfontembed1 libfreerdp-client2-2t64 libfreerdp-server2-2t64
   libfreerdp2-2t64 libgamin0 libgc1 libgcab-1.0-0 libgeocode-glib0
-  libgl1-amber-dri libgl2ps1.4 libglapi-amber libglibmm-2.4-1t64 libglpk40
-  libgnat-10 libgnome-bluetooth13t64 libgnome-games-support-1-3
-  libgnome-games-support-common libgoa-backend-1.0-1
-  libgraphicsmagick++-q16-12t64 libgssdp-1.2-0 libgtkmm-3.0-1t64
-  libgtksourceview-4-0 libgtksourceview-4-common libgupnp-1.2-1
-  libgweather-3-16 libgweather-common libhdf5-103-1t64 libhsa-runtime64-1
-  libhsakmt1 libhwloc-plugins libhwloc15 libicu70 libisc-export1105
-  libjavascriptcoregtk-4.0-18 libkf5idletime5 libklu1 libklu2 libldap-2.5-0
-  libllvm13 libllvm15t64 libllvm17t64 liblua5.2-0 liblua5.3-0
+  libgl1-amber-dri libglapi-amber libglibmm-2.4-1t64 libgnat-10
+  libgnome-bluetooth13t64 libgnome-games-support-1-3
+  libgnome-games-support-common libgoa-backend-1.0-1 libgssdp-1.2-0
+  libgtkmm-3.0-1t64 libgtksourceview-4-0 libgtksourceview-4-common
+  libgupnp-1.2-1 libgweather-3-16 libgweather-common libicu70
+  libisc-export1105 libjavascriptcoregtk-4.0-18 libkf5idletime5 libklu1
+  libldap-2.5-0 libllvm13 libllvm15t64 liblua5.2-0 liblua5.3-0
   libmagick++-6.q16-8 libmagickcore-6.q16-6 libmagickwand-6.q16-6
-  libmessaging-menu0 libmetis5 libmozjs-91-0 libnautilus-extension1a
-  libnetplan0 libnfs13 libnsl-dev libopenblas0 liborcus-0.17-0
-  liborcus-parser-0.17-0 libpangomm-1.4-1v5 libparted-fs-resize0t64
-  libpcre16-3 libpcre3 libpcre3-dev libpcre32-3 libpcrecpp0v5 libperl5.34
-  libplist3 libplot2c2 libpoppler118 libprotobuf23 libpsm-infinipath1
-  libpsm2-2 libpstoedit0t64 libpython3.10-dev libqhull-r8.0 libqhull8.0
-  libqpdf28 libqqwing2v5 libqrupdate1 libqscintilla2-qt5-15
-  libqscintilla2-qt5-l10n libqt5help5 librados2 libraw20 librdmacm1t64
+  libmessaging-menu0 libmozjs-91-0 libnautilus-extension1a libnetplan0
+  libnfs13 libnsl-dev liborcus-0.17-0 liborcus-parser-0.17-0
+  libpangomm-1.4-1v5 libparted-fs-resize0t64 libpcre16-3 libpcre3 libpcre3-dev
+  libpcre32-3 libpcrecpp0v5 libperl5.34 libplist3 libpoppler118 libprotobuf23
+  libpython3.10-dev libqhull8.0 libqpdf28 libqqwing2v5 librados2 libraw20
   libreoffice-pdfimport librest-0.7-0 libruby3.0 librygel-core-2.6-2
   librygel-db-2.6-2 librygel-renderer-2.6-2 librygel-server-2.6-2
-  libscotch-6.1 libscotch-7.0 libsigc++-2.0-0v5 libslicot0 libsmbios-c2
-  libsnapd-glib1 libsoup-gnome-2.4-1 libspqr4 libstdc++-11-dev
-  libsuitesparseconfig5 libsundials-ida4 libsundials-ida6
-  libsundials-nvecserial4 libsundials-sunmatrix2 libsundials-sunmatrix4
-  libsuperlu5 libsuperlu6 libsz2 libtext-unidecode-perl libtiff5 libtiffxx5
-  libtirpc-dev libtrilinos-kokkos-13.2 libtrilinos-trilinosss-13.2 libucx0
-  libumfpack5 libumfpack6 libunistring2 liburing2 libvncserver1 libvpx7
-  libwebkit2gtk-4.0-37 libwinpr2-2t64 libwxbase3.0-0v5 libwxbase3.2-1t64
-  libwxgtk3.0-gtk3-0v5 libwxgtk3.2-1t64 libxnvctrl0 libzip4t64 nautilus-share
-  octave-common octave-doc openjdk-11-jre-headless openjdk-21-jre-headless
-  openmpi-common perl-modules-5.34 pigz pkg-config pstoedit python3-future
-  python3-lib2to3 python3-lockfile python3-macaroonbakery python3-netifaces
-  python3-pip-whl python3-protobuf python3-pyatspi python3-pymacaroons
-  python3-rfc3339 python3-setuptools-whl python3.10 python3.10-dev
-  python3.10-minimal ruby3.0 runc samba samba-ad-provision samba-vfs-modules
-  tdb-tools tex-common texinfo texinfo-lib ubuntu-advantage-tools ubuntu-fan
+  libscotch-6.1 libsigc++-2.0-0v5 libsmbios-c2 libsnapd-glib1
+  libsoup-gnome-2.4-1 libstdc++-11-dev libsuitesparseconfig5 libsundials-ida4
+  libsundials-nvecserial4 libsundials-sunmatrix2 libsuperlu5 libtiff5
+  libtiffxx5 libtirpc-dev libumfpack5 libunistring2 liburing2 libvncserver1
+  libvpx7 libwebkit2gtk-4.0-37 libwinpr2-2t64 libwxbase3.0-0v5
+  libwxgtk3.0-gtk3-0v5 nautilus-share openjdk-11-jre-headless
+  perl-modules-5.34 pkg-config python3-future python3-lib2to3 python3-lockfile
+  python3-macaroonbakery python3-netifaces python3-protobuf python3-pyatspi
+  python3-pymacaroons python3-rfc3339 python3.10 python3.10-dev
+  python3.10-minimal ruby3.0 samba samba-ad-provision samba-vfs-modules
+  tdb-tools ubuntu-advantage-tools ubuntu-fan
 これを削除するには 'sudo apt autoremove' を利用してください。
-以下のパッケージは「削除」されます:
-  containerd
-アップグレード: 0 個、新規インストール: 0 個、削除: 1 個、保留: 7 個。
-この操作後に 140 MB のディスク容量が解放されます。
-(データベースを読み込んでいます ... 現在 257920 個のファイルとディレクトリがインストールされています。)
-containerd (1.7.27-0ubuntu1~24.04.1) を削除しています ...
-man-db (2.12.0-4build2) のトリガを処理しています ...
+アップグレード: 0 個、新規インストール: 0 個、削除: 0 個、保留: 7 個。
 パッケージリストを読み込んでいます... 完了
 依存関係ツリーを作成しています... 完了        
 状態情報を読み取っています... 完了        
+パッケージ 'runc' はインストールされていないため削除もされません
 以下のパッケージが自動でインストールされましたが、もう必要とされていません:
-  acpi-support acpid aglfn apturl apturl-common attr berkeley-abc
-  branding-ubuntu bridge-utils ca-certificates-java cheese-common
-  default-jre-headless epstool fonts-kacst fonts-kacst-one fonts-khmeros-core
+  acpi-support acpid apturl apturl-common attr berkeley-abc branding-ubuntu
+  bridge-utils cheese-common fonts-kacst fonts-kacst-one fonts-khmeros-core
   fonts-lao fonts-lklug-sinhala fonts-sil-abyssinica fonts-sil-padauk
   fonts-thai-tlwg fonts-tibetan-machine fonts-tlwg-garuda
   fonts-tlwg-garuda-ttf fonts-tlwg-kinnari fonts-tlwg-kinnari-ttf
@@ -624,84 +497,65 @@ man-db (2.12.0-4build2) のトリガを処理しています ...
   gir1.2-gweather-3.0 gir1.2-javascriptcoregtk-4.0 gir1.2-json-1.0
   gir1.2-nma-1.0 gir1.2-snapd-1 gir1.2-soup-2.4 gir1.2-webkit2-4.0
   gnome-bluetooth gnome-bluetooth-common gnome-mahjongg gnome-mines
-  gnome-sudoku gnuplot-data gnuplot-qt gstreamer1.0-clutter-3.0 guile-2.2-libs
-  irqbalance java-common libabsl20210324 libaec0 libamd-comgr2 libamd2 libamd3
-  libamdhip64-5 libappstream4 libarpack2t64 libatk1.0-data libatkmm-1.6-1v5
+  gnome-sudoku gstreamer1.0-clutter-3.0 guile-2.2-libs irqbalance
+  libabsl20210324 libamd2 libappstream4 libatk1.0-data libatkmm-1.6-1v5
   libblockdev-crypto2 libblockdev-fs2 libblockdev-loop2 libblockdev-part-err2
   libblockdev-part2 libblockdev-swap2 libblockdev-utils2 libblockdev2
   libboost-filesystem1.74.0 libboost-iostreams1.74.0 libboost-locale1.74.0
-  libboost-regex1.74.0 libboost-thread1.74.0 libbpf0 libbtf1 libbtf2
-  libcairomm-1.0-1v5 libcamd2 libcamd3 libcamel-1.2-63 libcbor0.8 libccolamd2
-  libccolamd3 libcephfs2 libcheese-gtk25 libcheese8 libcholmod3 libcholmod5
-  libclutter-1.0-0 libclutter-1.0-common libclutter-gst-3.0-0
-  libclutter-gtk-1.0-0 libcogl-common libcogl-pango20 libcogl-path20 libcogl20
-  libcolamd2 libcolord-gtk1t64 libcupsfilters1 libcxsparse3 libcxsparse4
-  libdav1d5 libdazzle-1.0-0 libdazzle-common libdmapsharing-3.0-2
-  libdns-export1110 libebackend-1.2-10 libebook-1.2-20 libebook-contacts-1.2-3
-  libecal-2.0-1 libedata-book-1.2-26 libedata-cal-2.0-1 libedataserver-1.2-26
-  libedataserverui-1.2-3 libemf1 libevent-core-2.1-7t64
-  libevent-pthreads-2.1-7t64 libfabric1 libflac8 libfltk-gl1.3t64
-  libfltk1.3t64 libfontembed1 libfreerdp-client2-2t64 libfreerdp-server2-2t64
+  libboost-regex1.74.0 libboost-thread1.74.0 libbpf0 libbtf1
+  libcairomm-1.0-1v5 libcamd2 libcamel-1.2-63 libcbor0.8 libccolamd2
+  libcephfs2 libcheese-gtk25 libcheese8 libcholmod3 libclutter-1.0-0
+  libclutter-1.0-common libclutter-gst-3.0-0 libclutter-gtk-1.0-0
+  libcogl-common libcogl-pango20 libcogl-path20 libcogl20 libcolamd2
+  libcolord-gtk1t64 libcupsfilters1 libcxsparse3 libdav1d5 libdazzle-1.0-0
+  libdazzle-common libdmapsharing-3.0-2 libdns-export1110 libebackend-1.2-10
+  libebook-1.2-20 libebook-contacts-1.2-3 libecal-2.0-1 libedata-book-1.2-26
+  libedata-cal-2.0-1 libedataserver-1.2-26 libedataserverui-1.2-3 libflac8
+  libfontembed1 libfreerdp-client2-2t64 libfreerdp-server2-2t64
   libfreerdp2-2t64 libgamin0 libgc1 libgcab-1.0-0 libgeocode-glib0
-  libgl1-amber-dri libgl2ps1.4 libglapi-amber libglibmm-2.4-1t64 libglpk40
-  libgnat-10 libgnome-bluetooth13t64 libgnome-games-support-1-3
-  libgnome-games-support-common libgoa-backend-1.0-1
-  libgraphicsmagick++-q16-12t64 libgssdp-1.2-0 libgtkmm-3.0-1t64
-  libgtksourceview-4-0 libgtksourceview-4-common libgupnp-1.2-1
-  libgweather-3-16 libgweather-common libhdf5-103-1t64 libhsa-runtime64-1
-  libhsakmt1 libhwloc-plugins libhwloc15 libicu70 libisc-export1105
-  libjavascriptcoregtk-4.0-18 libkf5idletime5 libklu1 libklu2 libldap-2.5-0
-  libllvm13 libllvm15t64 libllvm17t64 liblua5.2-0 liblua5.3-0
+  libgl1-amber-dri libglapi-amber libglibmm-2.4-1t64 libgnat-10
+  libgnome-bluetooth13t64 libgnome-games-support-1-3
+  libgnome-games-support-common libgoa-backend-1.0-1 libgssdp-1.2-0
+  libgtkmm-3.0-1t64 libgtksourceview-4-0 libgtksourceview-4-common
+  libgupnp-1.2-1 libgweather-3-16 libgweather-common libicu70
+  libisc-export1105 libjavascriptcoregtk-4.0-18 libkf5idletime5 libklu1
+  libldap-2.5-0 libllvm13 libllvm15t64 liblua5.2-0 liblua5.3-0
   libmagick++-6.q16-8 libmagickcore-6.q16-6 libmagickwand-6.q16-6
-  libmessaging-menu0 libmetis5 libmozjs-91-0 libnautilus-extension1a
-  libnetplan0 libnfs13 libnsl-dev libopenblas0 liborcus-0.17-0
-  liborcus-parser-0.17-0 libpangomm-1.4-1v5 libparted-fs-resize0t64
-  libpcre16-3 libpcre3 libpcre3-dev libpcre32-3 libpcrecpp0v5 libperl5.34
-  libplist3 libplot2c2 libpoppler118 libprotobuf23 libpsm-infinipath1
-  libpsm2-2 libpstoedit0t64 libpython3.10-dev libqhull-r8.0 libqhull8.0
-  libqpdf28 libqqwing2v5 libqrupdate1 libqscintilla2-qt5-15
-  libqscintilla2-qt5-l10n libqt5help5 librados2 libraw20 librdmacm1t64
+  libmessaging-menu0 libmozjs-91-0 libnautilus-extension1a libnetplan0
+  libnfs13 libnsl-dev liborcus-0.17-0 liborcus-parser-0.17-0
+  libpangomm-1.4-1v5 libparted-fs-resize0t64 libpcre16-3 libpcre3 libpcre3-dev
+  libpcre32-3 libpcrecpp0v5 libperl5.34 libplist3 libpoppler118 libprotobuf23
+  libpython3.10-dev libqhull8.0 libqpdf28 libqqwing2v5 librados2 libraw20
   libreoffice-pdfimport librest-0.7-0 libruby3.0 librygel-core-2.6-2
   librygel-db-2.6-2 librygel-renderer-2.6-2 librygel-server-2.6-2
-  libscotch-6.1 libscotch-7.0 libsigc++-2.0-0v5 libslicot0 libsmbios-c2
-  libsnapd-glib1 libsoup-gnome-2.4-1 libspqr4 libstdc++-11-dev
-  libsuitesparseconfig5 libsundials-ida4 libsundials-ida6
-  libsundials-nvecserial4 libsundials-sunmatrix2 libsundials-sunmatrix4
-  libsuperlu5 libsuperlu6 libsz2 libtext-unidecode-perl libtiff5 libtiffxx5
-  libtirpc-dev libtrilinos-kokkos-13.2 libtrilinos-trilinosss-13.2 libucx0
-  libumfpack5 libumfpack6 libunistring2 liburing2 libvncserver1 libvpx7
-  libwebkit2gtk-4.0-37 libwinpr2-2t64 libwxbase3.0-0v5 libwxbase3.2-1t64
-  libwxgtk3.0-gtk3-0v5 libwxgtk3.2-1t64 libxnvctrl0 libzip4t64 nautilus-share
-  octave-common octave-doc openjdk-11-jre-headless openjdk-21-jre-headless
-  openmpi-common perl-modules-5.34 pigz pkg-config pstoedit python3-future
-  python3-lib2to3 python3-lockfile python3-macaroonbakery python3-netifaces
-  python3-pip-whl python3-protobuf python3-pyatspi python3-pymacaroons
-  python3-rfc3339 python3-setuptools-whl python3.10 python3.10-dev
+  libscotch-6.1 libsigc++-2.0-0v5 libsmbios-c2 libsnapd-glib1
+  libsoup-gnome-2.4-1 libstdc++-11-dev libsuitesparseconfig5 libsundials-ida4
+  libsundials-nvecserial4 libsundials-sunmatrix2 libsuperlu5 libtiff5
+  libtiffxx5 libtirpc-dev libumfpack5 libunistring2 liburing2 libvncserver1
+  libvpx7 libwebkit2gtk-4.0-37 libwinpr2-2t64 libwxbase3.0-0v5
+  libwxgtk3.0-gtk3-0v5 nautilus-share openjdk-11-jre-headless
+  perl-modules-5.34 pkg-config python3-future python3-lib2to3 python3-lockfile
+  python3-macaroonbakery python3-netifaces python3-protobuf python3-pyatspi
+  python3-pymacaroons python3-rfc3339 python3.10 python3.10-dev
   python3.10-minimal ruby3.0 samba samba-ad-provision samba-vfs-modules
-  tdb-tools tex-common texinfo texinfo-lib ubuntu-advantage-tools ubuntu-fan
+  tdb-tools ubuntu-advantage-tools ubuntu-fan
 これを削除するには 'sudo apt autoremove' を利用してください。
-以下のパッケージは「削除」されます:
-  runc
-アップグレード: 0 個、新規インストール: 0 個、削除: 1 個、保留: 7 個。
-この操作後に 32.2 MB のディスク容量が解放されます。
-(データベースを読み込んでいます ... 現在 257886 個のファイルとディレクトリがインストールされています。)
-runc (1.2.5-0ubuntu1~24.04.1) を削除しています ...
-man-db (2.12.0-4build2) のトリガを処理しています ...
+アップグレード: 0 個、新規インストール: 0 個、削除: 0 個、保留: 7 個。
 >>>> Installing Docker prerequisites
-ヒット:1 http://jp.archive.ubuntu.com/ubuntu noble InRelease                   
+ヒット:1 https://download.docker.com/linux/ubuntu noble InRelease
 ヒット:2 http://security.ubuntu.com/ubuntu noble-security InRelease            
-ヒット:3 http://jp.archive.ubuntu.com/ubuntu noble-updates InRelease
-ヒット:4 http://jp.archive.ubuntu.com/ubuntu noble-backports InRelease
+ヒット:3 http://jp.archive.ubuntu.com/ubuntu noble InRelease                   
+ヒット:4 http://jp.archive.ubuntu.com/ubuntu noble-updates InRelease
+ヒット:5 http://jp.archive.ubuntu.com/ubuntu noble-backports InRelease
 パッケージリストを読み込んでいます... 完了
 パッケージリストを読み込んでいます... 完了
 依存関係ツリーを作成しています... 完了        
 状態情報を読み取っています... 完了        
 ca-certificates はすでに最新バージョン (20240203) です。
-ca-certificates は手動でインストールしたと設定されました。
+curl はすでに最新バージョン (8.5.0-2ubuntu10.6) です。
 以下のパッケージが自動でインストールされましたが、もう必要とされていません:
-  acpi-support acpid aglfn apturl apturl-common attr berkeley-abc
-  branding-ubuntu bridge-utils ca-certificates-java cheese-common
-  default-jre-headless epstool fonts-kacst fonts-kacst-one fonts-khmeros-core
+  acpi-support acpid apturl apturl-common attr berkeley-abc branding-ubuntu
+  bridge-utils cheese-common fonts-kacst fonts-kacst-one fonts-khmeros-core
   fonts-lao fonts-lklug-sinhala fonts-sil-abyssinica fonts-sil-padauk
   fonts-thai-tlwg fonts-tibetan-machine fonts-tlwg-garuda
   fonts-tlwg-garuda-ttf fonts-tlwg-kinnari fonts-tlwg-kinnari-ttf
@@ -716,89 +570,67 @@ ca-certificates は手動でインストールしたと設定されました。
   gir1.2-gweather-3.0 gir1.2-javascriptcoregtk-4.0 gir1.2-json-1.0
   gir1.2-nma-1.0 gir1.2-snapd-1 gir1.2-soup-2.4 gir1.2-webkit2-4.0
   gnome-bluetooth gnome-bluetooth-common gnome-mahjongg gnome-mines
-  gnome-sudoku gnuplot-data gnuplot-qt gstreamer1.0-clutter-3.0 guile-2.2-libs
-  irqbalance java-common libabsl20210324 libaec0 libamd-comgr2 libamd2 libamd3
-  libamdhip64-5 libappstream4 libarpack2t64 libatk1.0-data libatkmm-1.6-1v5
+  gnome-sudoku gstreamer1.0-clutter-3.0 guile-2.2-libs irqbalance
+  libabsl20210324 libamd2 libappstream4 libatk1.0-data libatkmm-1.6-1v5
   libblockdev-crypto2 libblockdev-fs2 libblockdev-loop2 libblockdev-part-err2
   libblockdev-part2 libblockdev-swap2 libblockdev-utils2 libblockdev2
   libboost-filesystem1.74.0 libboost-iostreams1.74.0 libboost-locale1.74.0
-  libboost-regex1.74.0 libboost-thread1.74.0 libbpf0 libbtf1 libbtf2
-  libcairomm-1.0-1v5 libcamd2 libcamd3 libcamel-1.2-63 libcbor0.8 libccolamd2
-  libccolamd3 libcephfs2 libcheese-gtk25 libcheese8 libcholmod3 libcholmod5
-  libclutter-1.0-0 libclutter-1.0-common libclutter-gst-3.0-0
-  libclutter-gtk-1.0-0 libcogl-common libcogl-pango20 libcogl-path20 libcogl20
-  libcolamd2 libcolord-gtk1t64 libcupsfilters1 libcxsparse3 libcxsparse4
-  libdav1d5 libdazzle-1.0-0 libdazzle-common libdmapsharing-3.0-2
-  libdns-export1110 libebackend-1.2-10 libebook-1.2-20 libebook-contacts-1.2-3
-  libecal-2.0-1 libedata-book-1.2-26 libedata-cal-2.0-1 libedataserver-1.2-26
-  libedataserverui-1.2-3 libemf1 libevent-core-2.1-7t64
-  libevent-pthreads-2.1-7t64 libfabric1 libflac8 libfltk-gl1.3t64
-  libfltk1.3t64 libfontembed1 libfreerdp-client2-2t64 libfreerdp-server2-2t64
+  libboost-regex1.74.0 libboost-thread1.74.0 libbpf0 libbtf1
+  libcairomm-1.0-1v5 libcamd2 libcamel-1.2-63 libcbor0.8 libccolamd2
+  libcephfs2 libcheese-gtk25 libcheese8 libcholmod3 libclutter-1.0-0
+  libclutter-1.0-common libclutter-gst-3.0-0 libclutter-gtk-1.0-0
+  libcogl-common libcogl-pango20 libcogl-path20 libcogl20 libcolamd2
+  libcolord-gtk1t64 libcupsfilters1 libcxsparse3 libdav1d5 libdazzle-1.0-0
+  libdazzle-common libdmapsharing-3.0-2 libdns-export1110 libebackend-1.2-10
+  libebook-1.2-20 libebook-contacts-1.2-3 libecal-2.0-1 libedata-book-1.2-26
+  libedata-cal-2.0-1 libedataserver-1.2-26 libedataserverui-1.2-3 libflac8
+  libfontembed1 libfreerdp-client2-2t64 libfreerdp-server2-2t64
   libfreerdp2-2t64 libgamin0 libgc1 libgcab-1.0-0 libgeocode-glib0
-  libgl1-amber-dri libgl2ps1.4 libglapi-amber libglibmm-2.4-1t64 libglpk40
-  libgnat-10 libgnome-bluetooth13t64 libgnome-games-support-1-3
-  libgnome-games-support-common libgoa-backend-1.0-1
-  libgraphicsmagick++-q16-12t64 libgssdp-1.2-0 libgtkmm-3.0-1t64
-  libgtksourceview-4-0 libgtksourceview-4-common libgupnp-1.2-1
-  libgweather-3-16 libgweather-common libhdf5-103-1t64 libhsa-runtime64-1
-  libhsakmt1 libhwloc-plugins libhwloc15 libicu70 libisc-export1105
-  libjavascriptcoregtk-4.0-18 libkf5idletime5 libklu1 libklu2 libldap-2.5-0
-  libllvm13 libllvm15t64 libllvm17t64 liblua5.2-0 liblua5.3-0
+  libgl1-amber-dri libglapi-amber libglibmm-2.4-1t64 libgnat-10
+  libgnome-bluetooth13t64 libgnome-games-support-1-3
+  libgnome-games-support-common libgoa-backend-1.0-1 libgssdp-1.2-0
+  libgtkmm-3.0-1t64 libgtksourceview-4-0 libgtksourceview-4-common
+  libgupnp-1.2-1 libgweather-3-16 libgweather-common libicu70
+  libisc-export1105 libjavascriptcoregtk-4.0-18 libkf5idletime5 libklu1
+  libldap-2.5-0 libllvm13 libllvm15t64 liblua5.2-0 liblua5.3-0
   libmagick++-6.q16-8 libmagickcore-6.q16-6 libmagickwand-6.q16-6
-  libmessaging-menu0 libmetis5 libmozjs-91-0 libnautilus-extension1a
-  libnetplan0 libnfs13 libnsl-dev libopenblas0 liborcus-0.17-0
-  liborcus-parser-0.17-0 libpangomm-1.4-1v5 libparted-fs-resize0t64
-  libpcre16-3 libpcre3 libpcre3-dev libpcre32-3 libpcrecpp0v5 libperl5.34
-  libplist3 libplot2c2 libpoppler118 libprotobuf23 libpsm-infinipath1
-  libpsm2-2 libpstoedit0t64 libpython3.10-dev libqhull-r8.0 libqhull8.0
-  libqpdf28 libqqwing2v5 libqrupdate1 libqscintilla2-qt5-15
-  libqscintilla2-qt5-l10n libqt5help5 librados2 libraw20 librdmacm1t64
+  libmessaging-menu0 libmozjs-91-0 libnautilus-extension1a libnetplan0
+  libnfs13 libnsl-dev liborcus-0.17-0 liborcus-parser-0.17-0
+  libpangomm-1.4-1v5 libparted-fs-resize0t64 libpcre16-3 libpcre3 libpcre3-dev
+  libpcre32-3 libpcrecpp0v5 libperl5.34 libplist3 libpoppler118 libprotobuf23
+  libpython3.10-dev libqhull8.0 libqpdf28 libqqwing2v5 librados2 libraw20
   libreoffice-pdfimport librest-0.7-0 libruby3.0 librygel-core-2.6-2
   librygel-db-2.6-2 librygel-renderer-2.6-2 librygel-server-2.6-2
-  libscotch-6.1 libscotch-7.0 libsigc++-2.0-0v5 libslicot0 libsmbios-c2
-  libsnapd-glib1 libsoup-gnome-2.4-1 libspqr4 libstdc++-11-dev
-  libsuitesparseconfig5 libsundials-ida4 libsundials-ida6
-  libsundials-nvecserial4 libsundials-sunmatrix2 libsundials-sunmatrix4
-  libsuperlu5 libsuperlu6 libsz2 libtext-unidecode-perl libtiff5 libtiffxx5
-  libtirpc-dev libtrilinos-kokkos-13.2 libtrilinos-trilinosss-13.2 libucx0
-  libumfpack5 libumfpack6 libunistring2 liburing2 libvncserver1 libvpx7
-  libwebkit2gtk-4.0-37 libwinpr2-2t64 libwxbase3.0-0v5 libwxbase3.2-1t64
-  libwxgtk3.0-gtk3-0v5 libwxgtk3.2-1t64 libxnvctrl0 libzip4t64 nautilus-share
-  octave-common octave-doc openjdk-11-jre-headless openjdk-21-jre-headless
-  openmpi-common perl-modules-5.34 pigz pkg-config pstoedit python3-future
-  python3-lib2to3 python3-lockfile python3-macaroonbakery python3-netifaces
-  python3-pip-whl python3-protobuf python3-pyatspi python3-pymacaroons
-  python3-rfc3339 python3-setuptools-whl python3.10 python3.10-dev
+  libscotch-6.1 libsigc++-2.0-0v5 libsmbios-c2 libsnapd-glib1
+  libsoup-gnome-2.4-1 libstdc++-11-dev libsuitesparseconfig5 libsundials-ida4
+  libsundials-nvecserial4 libsundials-sunmatrix2 libsuperlu5 libtiff5
+  libtiffxx5 libtirpc-dev libumfpack5 libunistring2 liburing2 libvncserver1
+  libvpx7 libwebkit2gtk-4.0-37 libwinpr2-2t64 libwxbase3.0-0v5
+  libwxgtk3.0-gtk3-0v5 nautilus-share openjdk-11-jre-headless
+  perl-modules-5.34 pkg-config python3-future python3-lib2to3 python3-lockfile
+  python3-macaroonbakery python3-netifaces python3-protobuf python3-pyatspi
+  python3-pymacaroons python3-rfc3339 python3.10 python3.10-dev
   python3.10-minimal ruby3.0 samba samba-ad-provision samba-vfs-modules
-  tdb-tools tex-common texinfo texinfo-lib ubuntu-advantage-tools ubuntu-fan
+  tdb-tools ubuntu-advantage-tools ubuntu-fan
 これを削除するには 'sudo apt autoremove' を利用してください。
-以下のパッケージが新たにインストールされます:
-  curl
-アップグレード: 0 個、新規インストール: 1 個、削除: 0 個、保留: 7 個。
-226 kB のアーカイブを取得する必要があります。
-この操作後に追加で 534 kB のディスク容量が消費されます。
-取得:1 http://jp.archive.ubuntu.com/ubuntu noble-updates/main amd64 curl amd64 8.5.0-2ubuntu10.6 [226 kB]
-226 kB を 2秒 で取得しました (106 kB/s)                             
-以前に未選択のパッケージ curl を選択しています。
-(データベースを読み込んでいます ... 現在 257858 個のファイルとディレクトリがインストールされています。)
-.../curl_8.5.0-2ubuntu10.6_amd64.deb を展開する準備をしています ...
-curl (8.5.0-2ubuntu10.6) を展開しています...
-curl (8.5.0-2ubuntu10.6) を設定しています ...
-man-db (2.12.0-4build2) のトリガを処理しています ...
+アップグレード: 0 個、新規インストール: 0 個、削除: 0 個、保留: 7 個。
 >>>> Adding Docker GPG key
 >>>> Setting up Docker repository
-取得:1 https://download.docker.com/linux/ubuntu noble InRelease [48.8 kB]
-取得:2 https://download.docker.com/linux/ubuntu noble/stable amd64 Packages [29.3 kB]
+ヒット:1 https://download.docker.com/linux/ubuntu noble InRelease
+ヒット:2 http://security.ubuntu.com/ubuntu noble-security InRelease            
 ヒット:3 http://jp.archive.ubuntu.com/ubuntu noble InRelease                   
-ヒット:4 http://security.ubuntu.com/ubuntu noble-security InRelease
-ヒット:5 http://jp.archive.ubuntu.com/ubuntu noble-updates InRelease
-ヒット:6 http://jp.archive.ubuntu.com/ubuntu noble-backports InRelease
-78.2 kB を 2秒 で取得しました (42.7 kB/s)
+ヒット:4 http://jp.archive.ubuntu.com/ubuntu noble-updates InRelease
+ヒット:5 http://jp.archive.ubuntu.com/ubuntu noble-backports InRelease
 パッケージリストを読み込んでいます... 完了
 >>>> Installing required (and useful) packages via APT
 パッケージリストを読み込んでいます... 完了
 依存関係ツリーを作成しています... 完了        
 状態情報を読み取っています... 完了        
+docker-ce はすでに最新バージョン (5:28.3.3-1~ubuntu.24.04~noble) です。
+docker-ce-cli はすでに最新バージョン (5:28.3.3-1~ubuntu.24.04~noble) です。
+containerd.io はすでに最新バージョン (1.7.27-1) です。
+docker-buildx-plugin はすでに最新バージョン (0.26.1-1~ubuntu.24.04~noble) です。
+docker-compose-plugin はすでに最新バージョン (2.39.1-1~ubuntu.24.04~noble) です。
 git はすでに最新バージョン (1:2.43.0-1ubuntu7.3) です。
 klayout はすでに最新バージョン (0.28.16-0ubuntu0.24.04.1) です。
 iverilog はすでに最新バージョン (12.0-2build2) です。
@@ -809,10 +641,9 @@ yosys はすでに最新バージョン (0.33-5build2) です。
 xdot はすでに最新バージョン (1.3-1) です。
 python3 はすでに最新バージョン (3.12.3-0ubuntu2) です。
 python3-pip はすでに最新バージョン (24.0+dfsg-1ubuntu1.2) です。
+python3.12-venv はすでに最新バージョン (3.12.3-1ubuntu0.8) です。
 gettext はすでに最新バージョン (0.21-14ubuntu2) です。
-gettext は手動でインストールしたと設定されました。
 python3-setuptools はすでに最新バージョン (68.1.2-2ubuntu1.2) です。
-python3-setuptools は手動でインストールしたと設定されました。
 build-essential はすでに最新バージョン (12.10ubuntu1) です。
 automake はすでに最新バージョン (1:1.16.5-1.3ubuntu1) です。
 autoconf はすでに最新バージョン (2.71-3) です。
@@ -820,6 +651,10 @@ gawk はすでに最新バージョン (1:5.2.1-2build3) です。
 m4 はすでに最新バージョン (1.4.19-4build1) です。
 flex はすでに最新バージョン (2.6.4-8.2build1) です。
 bison はすでに最新バージョン (2:3.8.2+dfsg-1build2) です。
+octave はすでに最新バージョン (8.4.0-1build5) です。
+octave-signal はすでに最新バージョン (1.4.5-2) です。
+octave-communications はすでに最新バージョン (1.2.6-2build1) です。
+octave-control はすでに最新バージョン (4.0.1-1ubuntu1) です。
 xterm はすでに最新バージョン (390-1ubuntu3) です。
 csh はすでに最新バージョン (20230828-1) です。
 tcsh はすでに最新バージョン (6.24.10-4build1) です。
@@ -908,247 +743,7 @@ libgtk-3-dev はすでに最新バージョン (3.24.41-4ubuntu1.3) です。
   python3.10-minimal ruby3.0 samba samba-ad-provision samba-vfs-modules
   tdb-tools ubuntu-advantage-tools ubuntu-fan
 これを削除するには 'sudo apt autoremove' を利用してください。
-以下の追加パッケージがインストールされます:
-  docker-ce-rootless-extras libcombblas2.0.0t64 libfftw3-mpi3
-  libhdf5-openmpi-103-1t64 libhypre-2.28.0 libmumps-5.6t64 libmunge2
-  libopenmpi3t64 libpetsc-real3.19t64 libpmix2t64 libptscotch-7.0
-  libscalapack-openmpi2.2 libslirp0 libsundials-nvecparallel-petsc6
-  libsundials-sunlinsol3 libsuperlu-dist8 libtrilinos-amesos-13.2
-  libtrilinos-aztecoo-13.2 libtrilinos-epetra-13.2 libtrilinos-epetraext-13.2
-  libtrilinos-galeri-13.2 libtrilinos-ifpack-13.2 libtrilinos-ml-13.2
-  libtrilinos-teuchos-13.2 libtrilinos-triutils-13.2 libtrilinos-zoltan-13.2
-  mpi-default-bin octave-communications-common openmpi-bin slirp4netns
-提案パッケージ:
-  cgroupfs-mount | cgroup-lite docker-model-plugin libfftw3-mpi-dev
-  scalapack-doc octave-dev gfortran | fortran-compiler
-以下のパッケージが新たにインストールされます:
-  containerd.io docker-buildx-plugin docker-ce docker-ce-cli
-  docker-ce-rootless-extras docker-compose-plugin libcombblas2.0.0t64
-  libfftw3-mpi3 libhdf5-openmpi-103-1t64 libhypre-2.28.0 libmumps-5.6t64
-  libmunge2 libopenmpi3t64 libpetsc-real3.19t64 libpmix2t64 libptscotch-7.0
-  libscalapack-openmpi2.2 libslirp0 libsundials-nvecparallel-petsc6
-  libsundials-sunlinsol3 libsuperlu-dist8 libtrilinos-amesos-13.2
-  libtrilinos-aztecoo-13.2 libtrilinos-epetra-13.2 libtrilinos-epetraext-13.2
-  libtrilinos-galeri-13.2 libtrilinos-ifpack-13.2 libtrilinos-ml-13.2
-  libtrilinos-teuchos-13.2 libtrilinos-triutils-13.2 libtrilinos-zoltan-13.2
-  mpi-default-bin octave octave-communications octave-communications-common
-  octave-control octave-signal openmpi-bin python3.12-venv slirp4netns
-アップグレード: 0 個、新規インストール: 40 個、削除: 0 個、保留: 7 個。
-139 MB のアーカイブを取得する必要があります。
-この操作後に追加で 558 MB のディスク容量が消費されます。
-取得:1 https://download.docker.com/linux/ubuntu noble/stable amd64 containerd.io amd64 1.7.27-1 [30.5 MB]
-取得:2 http://jp.archive.ubuntu.com/ubuntu noble/universe amd64 libmunge2 amd64 0.5.15-4build1 [14.7 kB]
-取得:3 http://jp.archive.ubuntu.com/ubuntu noble/universe amd64 libpmix2t64 amd64 5.0.1-4.1build1 [697 kB]
-取得:4 http://jp.archive.ubuntu.com/ubuntu noble/universe amd64 libopenmpi3t64 amd64 4.1.6-7ubuntu2 [2,563 kB]
-取得:5 https://download.docker.com/linux/ubuntu noble/stable amd64 docker-ce-cli amd64 5:28.3.3-1~ubuntu.24.04~noble [16.5 MB]
-取得:6 http://jp.archive.ubuntu.com/ubuntu noble/universe amd64 libcombblas2.0.0t64 amd64 2.0.0-3.1build2 [267 kB]
-取得:7 http://jp.archive.ubuntu.com/ubuntu noble/universe amd64 libfftw3-mpi3 amd64 3.3.10-1ubuntu3 [52.6 kB]
-取得:8 http://jp.archive.ubuntu.com/ubuntu noble/universe amd64 libhdf5-openmpi-103-1t64 amd64 1.10.10+repack-3.1ubuntu4 [1,325 kB]
-取得:9 http://jp.archive.ubuntu.com/ubuntu noble/universe amd64 libptscotch-7.0 amd64 7.0.4-1ubuntu2 [729 kB]
-取得:10 http://jp.archive.ubuntu.com/ubuntu noble/universe amd64 libsuperlu-dist8 amd64 8.2.1+dfsg1-1build2 [632 kB]
-取得:11 http://jp.archive.ubuntu.com/ubuntu noble/universe amd64 libhypre-2.28.0 amd64 2.28.0-8build2 [1,701 kB]
-取得:12 http://jp.archive.ubuntu.com/ubuntu noble/universe amd64 openmpi-bin amd64 4.1.6-7ubuntu2 [114 kB]
-取得:13 http://jp.archive.ubuntu.com/ubuntu noble/universe amd64 mpi-default-bin amd64 1.15build1 [2,376 B]
-取得:14 http://jp.archive.ubuntu.com/ubuntu noble/universe amd64 libscalapack-openmpi2.2 amd64 2.2.1-3.1ubuntu1 [1,740 kB]
-取得:15 http://jp.archive.ubuntu.com/ubuntu noble/universe amd64 libmumps-5.6t64 amd64 5.6.2-2.1build2 [1,951 kB]
-取得:16 http://jp.archive.ubuntu.com/ubuntu noble/universe amd64 libtrilinos-teuchos-13.2 amd64 13.2.0-5build2 [1,207 kB]
-取得:17 http://jp.archive.ubuntu.com/ubuntu noble/universe amd64 libtrilinos-epetra-13.2 amd64 13.2.0-5build2 [452 kB]
-取得:18 http://jp.archive.ubuntu.com/ubuntu noble/universe amd64 libtrilinos-triutils-13.2 amd64 13.2.0-5build2 [126 kB]
-取得:19 http://jp.archive.ubuntu.com/ubuntu noble/universe amd64 libtrilinos-epetraext-13.2 amd64 13.2.0-5build2 [448 kB]
-取得:20 http://jp.archive.ubuntu.com/ubuntu noble/universe amd64 libtrilinos-amesos-13.2 amd64 13.2.0-5build2 [108 kB]
-取得:21 http://jp.archive.ubuntu.com/ubuntu noble/universe amd64 libtrilinos-aztecoo-13.2 amd64 13.2.0-5build2 [214 kB]
-取得:22 http://jp.archive.ubuntu.com/ubuntu noble/universe amd64 libtrilinos-galeri-13.2 amd64 13.2.0-5build2 [91.3 kB]
-取得:23 http://jp.archive.ubuntu.com/ubuntu noble/universe amd64 libtrilinos-ifpack-13.2 amd64 13.2.0-5build2 [437 kB]
-取得:24 http://jp.archive.ubuntu.com/ubuntu noble/universe amd64 libtrilinos-zoltan-13.2 amd64 13.2.0-5build2 [403 kB]
-取得:25 http://jp.archive.ubuntu.com/ubuntu noble/universe amd64 libtrilinos-ml-13.2 amd64 13.2.0-5build2 [1,000 kB]
-取得:26 http://jp.archive.ubuntu.com/ubuntu noble/universe amd64 libpetsc-real3.19t64 amd64 3.19.6+dfsg1-2.2ubuntu2 [6,926 kB]
-取得:27 http://jp.archive.ubuntu.com/ubuntu noble/main amd64 libslirp0 amd64 4.7.0-1ubuntu3 [63.8 kB]
-取得:28 http://jp.archive.ubuntu.com/ubuntu noble/universe amd64 libsundials-nvecparallel-petsc6 amd64 6.4.1+dfsg1-3build4 [36.4 kB]
-取得:29 http://jp.archive.ubuntu.com/ubuntu noble/universe amd64 libsundials-sunlinsol3 amd64 6.4.1+dfsg1-3build4 [172 kB]
-取得:30 http://jp.archive.ubuntu.com/ubuntu noble/universe amd64 octave amd64 8.4.0-1build5 [9,967 kB]
-取得:31 https://download.docker.com/linux/ubuntu noble/stable amd64 docker-ce amd64 5:28.3.3-1~ubuntu.24.04~noble [19.7 MB]
-取得:32 http://jp.archive.ubuntu.com/ubuntu noble/universe amd64 octave-control amd64 4.0.1-1ubuntu1 [320 kB]
-取得:33 http://jp.archive.ubuntu.com/ubuntu noble/universe amd64 octave-signal amd64 1.4.5-2 [761 kB]
-取得:34 http://jp.archive.ubuntu.com/ubuntu noble/universe amd64 octave-communications-common all 1.2.6-2build1 [618 kB]
-取得:35 http://jp.archive.ubuntu.com/ubuntu noble/universe amd64 octave-communications amd64 1.2.6-2build1 [202 kB]
-取得:36 http://jp.archive.ubuntu.com/ubuntu noble-updates/universe amd64 python3.12-venv amd64 3.12.3-1ubuntu0.8 [5,678 B]
-取得:37 http://jp.archive.ubuntu.com/ubuntu noble/universe amd64 slirp4netns amd64 1.2.1-1build2 [34.9 kB]
-取得:38 https://download.docker.com/linux/ubuntu noble/stable amd64 docker-buildx-plugin amd64 0.26.1-1~ubuntu.24.04~noble [15.8 MB]
-取得:39 https://download.docker.com/linux/ubuntu noble/stable amd64 docker-ce-rootless-extras amd64 5:28.3.3-1~ubuntu.24.04~noble [6,479 kB]
-取得:40 https://download.docker.com/linux/ubuntu noble/stable amd64 docker-compose-plugin amd64 2.39.1-1~ubuntu.24.04~noble [14.3 MB]
-139 MB を 10秒 で取得しました (14.0 MB/s)                                      
-パッケージからテンプレートを展開しています: 100%
-以前に未選択のパッケージ containerd.io を選択しています。
-(データベースを読み込んでいます ... 現在 257865 個のファイルとディレクトリがインストールされています。)
-.../00-containerd.io_1.7.27-1_amd64.deb を展開する準備をしています ...
-containerd.io (1.7.27-1) を展開しています...
-以前に未選択のパッケージ docker-ce-cli を選択しています。
-.../01-docker-ce-cli_5%3a28.3.3-1~ubuntu.24.04~noble_amd64.deb を展開する準備をしています ...
-docker-ce-cli (5:28.3.3-1~ubuntu.24.04~noble) を展開しています...
-以前に未選択のパッケージ docker-ce を選択しています。
-.../02-docker-ce_5%3a28.3.3-1~ubuntu.24.04~noble_amd64.deb を展開する準備をしています ...
-docker-ce (5:28.3.3-1~ubuntu.24.04~noble) を展開しています...
-以前に未選択のパッケージ docker-buildx-plugin を選択しています。
-.../03-docker-buildx-plugin_0.26.1-1~ubuntu.24.04~noble_amd64.deb を展開する準備をしています ...
-docker-buildx-plugin (0.26.1-1~ubuntu.24.04~noble) を展開しています...
-以前に未選択のパッケージ docker-ce-rootless-extras を選択しています。
-.../04-docker-ce-rootless-extras_5%3a28.3.3-1~ubuntu.24.04~noble_amd64.deb を展開する準備をしています ...
-docker-ce-rootless-extras (5:28.3.3-1~ubuntu.24.04~noble) を展開しています...
-以前に未選択のパッケージ docker-compose-plugin を選択しています。
-.../05-docker-compose-plugin_2.39.1-1~ubuntu.24.04~noble_amd64.deb を展開する準備をしています ...
-docker-compose-plugin (2.39.1-1~ubuntu.24.04~noble) を展開しています...
-以前に未選択のパッケージ libmunge2:amd64 を選択しています。
-.../06-libmunge2_0.5.15-4build1_amd64.deb を展開する準備をしています ...
-libmunge2:amd64 (0.5.15-4build1) を展開しています...
-以前に未選択のパッケージ libpmix2t64:amd64 を選択しています。
-.../07-libpmix2t64_5.0.1-4.1build1_amd64.deb を展開する準備をしています ...
-libpmix2t64:amd64 (5.0.1-4.1build1) を展開しています...
-以前に未選択のパッケージ libopenmpi3t64:amd64 を選択しています。
-.../08-libopenmpi3t64_4.1.6-7ubuntu2_amd64.deb を展開する準備をしています ...
-libopenmpi3t64:amd64 (4.1.6-7ubuntu2) を展開しています...
-以前に未選択のパッケージ libcombblas2.0.0t64:amd64 を選択しています。
-.../09-libcombblas2.0.0t64_2.0.0-3.1build2_amd64.deb を展開する準備をしています ...
-libcombblas2.0.0t64:amd64 (2.0.0-3.1build2) を展開しています...
-以前に未選択のパッケージ libfftw3-mpi3:amd64 を選択しています。
-.../10-libfftw3-mpi3_3.3.10-1ubuntu3_amd64.deb を展開する準備をしています ...
-libfftw3-mpi3:amd64 (3.3.10-1ubuntu3) を展開しています...
-以前に未選択のパッケージ libhdf5-openmpi-103-1t64:amd64 を選択しています。
-.../11-libhdf5-openmpi-103-1t64_1.10.10+repack-3.1ubuntu4_amd64.deb を展開する準備をしています ...
-libhdf5-openmpi-103-1t64:amd64 (1.10.10+repack-3.1ubuntu4) を展開しています...
-以前に未選択のパッケージ libptscotch-7.0:amd64 を選択しています。
-.../12-libptscotch-7.0_7.0.4-1ubuntu2_amd64.deb を展開する準備をしています ...
-libptscotch-7.0:amd64 (7.0.4-1ubuntu2) を展開しています...
-以前に未選択のパッケージ libsuperlu-dist8:amd64 を選択しています。
-.../13-libsuperlu-dist8_8.2.1+dfsg1-1build2_amd64.deb を展開する準備をしています ...
-libsuperlu-dist8:amd64 (8.2.1+dfsg1-1build2) を展開しています...
-以前に未選択のパッケージ libhypre-2.28.0:amd64 を選択しています。
-.../14-libhypre-2.28.0_2.28.0-8build2_amd64.deb を展開する準備をしています ...
-libhypre-2.28.0:amd64 (2.28.0-8build2) を展開しています...
-以前に未選択のパッケージ openmpi-bin を選択しています。
-.../15-openmpi-bin_4.1.6-7ubuntu2_amd64.deb を展開する準備をしています ...
-openmpi-bin (4.1.6-7ubuntu2) を展開しています...
-以前に未選択のパッケージ mpi-default-bin を選択しています。
-.../16-mpi-default-bin_1.15build1_amd64.deb を展開する準備をしています ...
-mpi-default-bin (1.15build1) を展開しています...
-以前に未選択のパッケージ libscalapack-openmpi2.2:amd64 を選択しています。
-.../17-libscalapack-openmpi2.2_2.2.1-3.1ubuntu1_amd64.deb を展開する準備をしています ...
-libscalapack-openmpi2.2:amd64 (2.2.1-3.1ubuntu1) を展開しています...
-以前に未選択のパッケージ libmumps-5.6t64:amd64 を選択しています。
-.../18-libmumps-5.6t64_5.6.2-2.1build2_amd64.deb を展開する準備をしています ...
-libmumps-5.6t64:amd64 (5.6.2-2.1build2) を展開しています...
-以前に未選択のパッケージ libtrilinos-teuchos-13.2:amd64 を選択しています。
-.../19-libtrilinos-teuchos-13.2_13.2.0-5build2_amd64.deb を展開する準備をしています ...
-libtrilinos-teuchos-13.2:amd64 (13.2.0-5build2) を展開しています...
-以前に未選択のパッケージ libtrilinos-epetra-13.2:amd64 を選択しています。
-.../20-libtrilinos-epetra-13.2_13.2.0-5build2_amd64.deb を展開する準備をしています ...
-libtrilinos-epetra-13.2:amd64 (13.2.0-5build2) を展開しています...
-以前に未選択のパッケージ libtrilinos-triutils-13.2:amd64 を選択しています。
-.../21-libtrilinos-triutils-13.2_13.2.0-5build2_amd64.deb を展開する準備をしています ...
-libtrilinos-triutils-13.2:amd64 (13.2.0-5build2) を展開しています...
-以前に未選択のパッケージ libtrilinos-epetraext-13.2:amd64 を選択しています。
-.../22-libtrilinos-epetraext-13.2_13.2.0-5build2_amd64.deb を展開する準備をしています ...
-libtrilinos-epetraext-13.2:amd64 (13.2.0-5build2) を展開しています...
-以前に未選択のパッケージ libtrilinos-amesos-13.2:amd64 を選択しています。
-.../23-libtrilinos-amesos-13.2_13.2.0-5build2_amd64.deb を展開する準備をしています ...
-libtrilinos-amesos-13.2:amd64 (13.2.0-5build2) を展開しています...
-以前に未選択のパッケージ libtrilinos-aztecoo-13.2:amd64 を選択しています。
-.../24-libtrilinos-aztecoo-13.2_13.2.0-5build2_amd64.deb を展開する準備をしています ...
-libtrilinos-aztecoo-13.2:amd64 (13.2.0-5build2) を展開しています...
-以前に未選択のパッケージ libtrilinos-galeri-13.2:amd64 を選択しています。
-.../25-libtrilinos-galeri-13.2_13.2.0-5build2_amd64.deb を展開する準備をしています ...
-libtrilinos-galeri-13.2:amd64 (13.2.0-5build2) を展開しています...
-以前に未選択のパッケージ libtrilinos-ifpack-13.2:amd64 を選択しています。
-.../26-libtrilinos-ifpack-13.2_13.2.0-5build2_amd64.deb を展開する準備をしています ...
-libtrilinos-ifpack-13.2:amd64 (13.2.0-5build2) を展開しています...
-以前に未選択のパッケージ libtrilinos-zoltan-13.2:amd64 を選択しています。
-.../27-libtrilinos-zoltan-13.2_13.2.0-5build2_amd64.deb を展開する準備をしています ...
-libtrilinos-zoltan-13.2:amd64 (13.2.0-5build2) を展開しています...
-以前に未選択のパッケージ libtrilinos-ml-13.2:amd64 を選択しています。
-.../28-libtrilinos-ml-13.2_13.2.0-5build2_amd64.deb を展開する準備をしています ...
-libtrilinos-ml-13.2:amd64 (13.2.0-5build2) を展開しています...
-以前に未選択のパッケージ libpetsc-real3.19t64:amd64 を選択しています。
-.../29-libpetsc-real3.19t64_3.19.6+dfsg1-2.2ubuntu2_amd64.deb を展開する準備をしています ...
-libpetsc-real3.19t64:amd64 (3.19.6+dfsg1-2.2ubuntu2) を展開しています...
-以前に未選択のパッケージ libslirp0:amd64 を選択しています。
-.../30-libslirp0_4.7.0-1ubuntu3_amd64.deb を展開する準備をしています ...
-libslirp0:amd64 (4.7.0-1ubuntu3) を展開しています...
-以前に未選択のパッケージ libsundials-nvecparallel-petsc6:amd64 を選択しています。
-.../31-libsundials-nvecparallel-petsc6_6.4.1+dfsg1-3build4_amd64.deb を展開する準備をしています ...
-libsundials-nvecparallel-petsc6:amd64 (6.4.1+dfsg1-3build4) を展開しています...
-以前に未選択のパッケージ libsundials-sunlinsol3:amd64 を選択しています。
-.../32-libsundials-sunlinsol3_6.4.1+dfsg1-3build4_amd64.deb を展開する準備をしています ...
-libsundials-sunlinsol3:amd64 (6.4.1+dfsg1-3build4) を展開しています...
-以前に未選択のパッケージ octave を選択しています。
-.../33-octave_8.4.0-1build5_amd64.deb を展開する準備をしています ...
-octave (8.4.0-1build5) を展開しています...
-以前に未選択のパッケージ octave-control:amd64 を選択しています。
-.../34-octave-control_4.0.1-1ubuntu1_amd64.deb を展開する準備をしています ...
-octave-control:amd64 (4.0.1-1ubuntu1) を展開しています...
-以前に未選択のパッケージ octave-signal を選択しています。
-.../35-octave-signal_1.4.5-2_amd64.deb を展開する準備をしています ...
-octave-signal (1.4.5-2) を展開しています...
-以前に未選択のパッケージ octave-communications-common を選択しています。
-.../36-octave-communications-common_1.2.6-2build1_all.deb を展開する準備をしています ...
-octave-communications-common (1.2.6-2build1) を展開しています...
-以前に未選択のパッケージ octave-communications:amd64 を選択しています。
-.../37-octave-communications_1.2.6-2build1_amd64.deb を展開する準備をしています ...
-octave-communications:amd64 (1.2.6-2build1) を展開しています...
-以前に未選択のパッケージ python3.12-venv を選択しています。
-.../38-python3.12-venv_3.12.3-1ubuntu0.8_amd64.deb を展開する準備をしています ...
-python3.12-venv (3.12.3-1ubuntu0.8) を展開しています...
-以前に未選択のパッケージ slirp4netns を選択しています。
-.../39-slirp4netns_1.2.1-1build2_amd64.deb を展開する準備をしています ...
-slirp4netns (1.2.1-1build2) を展開しています...
-python3.12-venv (3.12.3-1ubuntu0.8) を設定しています ...
-docker-buildx-plugin (0.26.1-1~ubuntu.24.04~noble) を設定しています ...
-libmunge2:amd64 (0.5.15-4build1) を設定しています ...
-containerd.io (1.7.27-1) を設定しています ...
-docker-compose-plugin (2.39.1-1~ubuntu.24.04~noble) を設定しています ...
-libpmix2t64:amd64 (5.0.1-4.1build1) を設定しています ...
-libopenmpi3t64:amd64 (4.1.6-7ubuntu2) を設定しています ...
-docker-ce-cli (5:28.3.3-1~ubuntu.24.04~noble) を設定しています ...
-libslirp0:amd64 (4.7.0-1ubuntu3) を設定しています ...
-docker-ce-rootless-extras (5:28.3.3-1~ubuntu.24.04~noble) を設定しています ...
-openmpi-bin (4.1.6-7ubuntu2) を設定しています ...
-update-alternatives: /usr/bin/mpirun (mpirun) を提供するために自動モードで /usr/bin/mpirun.openmpi を使います
-update-alternatives: /usr/bin/mpicc (mpi) を提供するために自動モードで /usr/bin/mpicc.openmpi を使います
-libptscotch-7.0:amd64 (7.0.4-1ubuntu2) を設定しています ...
-slirp4netns (1.2.1-1build2) を設定しています ...
-mpi-default-bin (1.15build1) を設定しています ...
-libcombblas2.0.0t64:amd64 (2.0.0-3.1build2) を設定しています ...
-libfftw3-mpi3:amd64 (3.3.10-1ubuntu3) を設定しています ...
-libtrilinos-zoltan-13.2:amd64 (13.2.0-5build2) を設定しています ...
-libhdf5-openmpi-103-1t64:amd64 (1.10.10+repack-3.1ubuntu4) を設定しています ...
-libtrilinos-teuchos-13.2:amd64 (13.2.0-5build2) を設定しています ...
-docker-ce (5:28.3.3-1~ubuntu.24.04~noble) を設定しています ...
-Could not execute systemctl:  at /usr/bin/deb-systemd-invoke line 148.
-libtrilinos-epetra-13.2:amd64 (13.2.0-5build2) を設定しています ...
-libtrilinos-aztecoo-13.2:amd64 (13.2.0-5build2) を設定しています ...
-libtrilinos-triutils-13.2:amd64 (13.2.0-5build2) を設定しています ...
-libscalapack-openmpi2.2:amd64 (2.2.1-3.1ubuntu1) を設定しています ...
-libsuperlu-dist8:amd64 (8.2.1+dfsg1-1build2) を設定しています ...
-libmumps-5.6t64:amd64 (5.6.2-2.1build2) を設定しています ...
-libhypre-2.28.0:amd64 (2.28.0-8build2) を設定しています ...
-libtrilinos-epetraext-13.2:amd64 (13.2.0-5build2) を設定しています ...
-libtrilinos-galeri-13.2:amd64 (13.2.0-5build2) を設定しています ...
-libtrilinos-amesos-13.2:amd64 (13.2.0-5build2) を設定しています ...
-libtrilinos-ifpack-13.2:amd64 (13.2.0-5build2) を設定しています ...
-libtrilinos-ml-13.2:amd64 (13.2.0-5build2) を設定しています ...
-libpetsc-real3.19t64:amd64 (3.19.6+dfsg1-2.2ubuntu2) を設定しています ...
-update-alternatives: /usr/lib/x86_64-linux-gnu/libpetsc.so.3.19 (libpetsc.so.3.19) を提供するために自動モードで /usr/lib/x86_64-linux-gnu/libpetsc_real.so.3.19.6 を使います
-libsundials-nvecparallel-petsc6:amd64 (6.4.1+dfsg1-3build4) を設定しています ...
-libsundials-sunlinsol3:amd64 (6.4.1+dfsg1-3build4) を設定しています ...
-octave (8.4.0-1build5) を設定しています ...
-octave-control:amd64 (4.0.1-1ubuntu1) を設定しています ...
-octave-signal (1.4.5-2) を設定しています ...
-octave-communications-common (1.2.6-2build1) を設定しています ...
-octave-communications:amd64 (1.2.6-2build1) を設定しています ...
-mailcap (3.70+nmu1ubuntu1) のトリガを処理しています ...
-desktop-file-utils (0.27-2build1) のトリガを処理しています ...
-gnome-menus (3.36.0-1.1ubuntu3) のトリガを処理しています ...
-libc-bin (2.39-0ubuntu8.5) のトリガを処理しています ...
-man-db (2.12.0-4build2) のトリガを処理しています ...
-install-info (7.1-3build2) のトリガを処理しています ...
+アップグレード: 0 個、新規インストール: 0 個、削除: 0 個、保留: 7 個。
 >>>> Verifying installations...
 Checking for docker... -e [ OK ]
 Checking for git... -e [ OK ]
@@ -2227,21 +1822,10 @@ Model file sky130.lib.spice.ff.red written.
 There have been warnings! Please check output log.
 >>>> Add custom bindkeys to magicrc
 >>>> Updating xschem
-remote: Enumerating objects: 7, done.
-remote: Counting objects: 100% (7/7), done.
-remote: Compressing objects: 100% (1/1), done.
-remote: Total 4 (delta 3), reused 4 (delta 3), pack-reused 0 (from 0)
-Unpacking objects: 100% (4/4), 460 bytes | 51.00 KiB/s, done.
-From https://github.com/StefanSchippers/xschem
-   010a31d7..48968f0e  master     -> origin/master
-Updating 010a31d7..48968f0e
-Fast-forward
- src/callback.c | 5 +++++
- 1 file changed, 5 insertions(+)
+Already up to date.
 cd src && make
 make[1]: ディレクトリ '/root/src/xschem/src' に入ります
-gcc -c -pipe -O2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/tcl8.6  -o callback.o callback.c
-gcc -o xschem icon.o callback.o actions.o move.o check.o clip.o draw.o globals.o  main.o netlist.o hash_iterator.o findnet.o scheduler.o store.o xinit.o  select.o font.o editprop.o save.o paste.o token.o psprint.o node_hash.o  hilight.o options.o vhdl_netlist.o svgdraw.o spice_netlist.o spectre_netlist.o  tedax_netlist.o verilog_netlist.o parselabel.o expandlabel.o  eval_expr.o in_memory_undo.o cairo_jpg.o   -lm -ljpeg -lcairo -lX11 -lxcb -lxcb-render -lX11-xcb -lXpm -ltcl8.6 -ltk8.6 
+make[1]: 'all' に対して行うべき事はありません.
 make[1]: ディレクトリ '/root/src/xschem/src' から出ます
 cd xschem_library && make
 make[1]: ディレクトリ '/root/src/xschem/xschem_library' に入ります
@@ -2354,381 +1938,17 @@ make[1]: ディレクトリ '/root/src/xschem/src/utile' に入ります
 ../../scconfig/sccbox rm "/usr/local/share/xschem/utile/Makefile"
 make[1]: ディレクトリ '/root/src/xschem/src/utile' から出ます
 Checking for xschem installation... -e [ OK ]
->>>> Installing gaw
-Cloning into '/root/src/xschem-gaw'...
-remote: Enumerating objects: 408, done.
-remote: Counting objects: 100% (68/68), done.
-remote: Compressing objects: 100% (45/45), done.
-remote: Total 408 (delta 31), reused 25 (delta 21), pack-reused 340 (from 1)
-Receiving objects: 100% (408/408), 2.97 MiB | 2.56 MiB/s, done.
-Resolving deltas: 100% (124/124), done.
-src/Makefile.am:19: warning: 'INCLUDES' is the old name for 'AM_CPPFLAGS' (or '*_CPPFLAGS')
-configure.ac:9: warning: The macro `AC_CONFIG_HEADER' is obsolete.
-configure.ac:9: You should run autoupdate.
-./lib/autoconf/status.m4:719: AC_CONFIG_HEADER is expanded from...
-configure.ac:9: the top level
-configure.ac:30: warning: The macro `AC_HEADER_STDC' is obsolete.
-configure.ac:30: You should run autoupdate.
-./lib/autoconf/headers.m4:704: AC_HEADER_STDC is expanded from...
-configure.ac:30: the top level
-configure.ac:102: warning: The macro `AC_LANG_C' is obsolete.
-configure.ac:102: You should run autoupdate.
-./lib/autoconf/c.m4:72: AC_LANG_C is expanded from...
-acinclude.m4:15: AM_PATH_ALSA is expanded from...
-configure.ac:102: the top level
-configure.ac:102: warning: The macro `AC_TRY_COMPILE' is obsolete.
-configure.ac:102: You should run autoupdate.
-./lib/autoconf/general.m4:2847: AC_TRY_COMPILE is expanded from...
-acinclude.m4:15: AM_PATH_ALSA is expanded from...
-configure.ac:102: the top level
-checking for a BSD-compatible install... /usr/bin/install -c
-checking whether build environment is sane... yes
-checking for a race-free mkdir -p... /usr/bin/mkdir -p
-checking for gawk... gawk
-checking whether make sets $(MAKE)... yes
-checking whether make supports nested variables... yes
-Configuring gaw3 version 20250128
-checking for gcc... gcc
-checking whether the C compiler works... yes
-checking for C compiler default output file name... a.out
-checking for suffix of executables... 
-checking whether we are cross compiling... no
-checking for suffix of object files... o
-checking whether the compiler supports GNU C... yes
-checking whether gcc accepts -g... yes
-checking for gcc option to enable C11 features... none needed
-checking whether gcc understands -c and -o together... yes
-checking whether make supports the include directive... yes (GNU style)
-checking dependency style of gcc... gcc3
-checking for ranlib... ranlib
-checking for stdio.h... yes
-checking for stdlib.h... yes
-checking for string.h... yes
-checking for inttypes.h... yes
-checking for stdint.h... yes
-checking for strings.h... yes
-checking for sys/stat.h... yes
-checking for sys/types.h... yes
-checking for unistd.h... yes
-checking for grep that handles long lines and -e... /usr/bin/grep
-checking for egrep... /usr/bin/grep -E
-checking for fcntl.h... yes
-checking for float.h... yes
-checking for stdlib.h... (cached) yes
-checking for string.h... (cached) yes
-checking for unistd.h... (cached) yes
-checking for special C compiler options needed for large files... no
-checking for _FILE_OFFSET_BITS value needed for large files... no
-checking for an ANSI C-conforming const... yes
-checking for inline... inline
-checking for size_t... yes
-checking whether struct tm is in sys/time.h or time.h... time.h
-checking build system type... x86_64-unknown-linux-gnu
-checking host system type... x86_64-unknown-linux-gnu
-checking for GNU libc compatible malloc... yes
-checking for working memcmp... yes
-checking whether lstat correctly handles trailing slash... yes
-checking whether stat accepts an empty string... no
-checking for working strtod... yes
-checking for vprintf... yes
-checking for _LARGEFILE_SOURCE value needed for large files... no
-checking for mkdir... yes
-checking for pow... no
-checking for regcomp... yes
-checking for strcasecmp... yes
-checking for strchr... yes
-checking for strcspn... yes
-checking for strdup... yes
-checking for strerror... yes
-checking for strrchr... yes
-checking for strspn... yes
-checking for strstr... yes
-checking for pkg-config... /usr/bin/pkg-config
-checking for byteswap.h... yes
-checking for endian.h... yes
-checking for libkern/OSByteOrder.h... no
-checking for sys/endian.h... no
-checking for a sed that does not truncate output... /usr/bin/sed
-checking whether NLS is requested... yes
-checking for msgfmt... /usr/bin/msgfmt
-checking for gmsgfmt... /usr/bin/msgfmt
-checking for xgettext... /usr/bin/xgettext
-checking for msgmerge... /usr/bin/msgmerge
-checking for ld used by gcc... /usr/bin/ld
-checking if the linker (/usr/bin/ld) is GNU ld... yes
-checking for shared library run path origin... done
-checking 32-bit host C ABI... no
-checking how to run the C preprocessor... gcc -E
-checking for ELF binary format... yes
-checking for the common suffixes of directories in the library search path... lib,lib,lib64
-checking for CFPreferencesCopyAppValue... no
-checking for CFLocaleCopyPreferredLanguages... no
-checking for GNU gettext in libc... yes
-checking whether to use NLS... yes
-checking where the gettext function comes from... libc
-checking for alsa/pcm.h... no
-checking for alsa/mixer.h... no
-Alsa libs interface compilation is disabled.
-checking pkg-config is at least version 0.9.0... yes
-checking for gtk+-3.0 >= 3.0.0... yes
-checking for glib-2.0 >= 2.28.0... yes
-checking that generated files are newer than configure... done
-configure: creating ./config.status
-config.status: creating Makefile
-config.status: creating src/Makefile
-config.status: creating lib/Makefile
-config.status: creating po/Makefile.in
-config.status: creating config.h
-config.status: executing depfiles commands
-config.status: executing po-directories commands
-config.status: creating po/POTFILES
-config.status: creating po/Makefile
-
-** Configuration summary for gaw3 20250128:
-
-   GLIB library version:             2.80.0
-   GTK+ library version:             3.24.41
-   Alsa version:                     
-   data directory:                   /usr/local/share/gaw
-   locale directory:                 /usr/local/share/locale
-
-(CDPATH="${ZSH_VERSION+.}:" && cd . && /bin/bash '/root/src/xschem-gaw/missing' autoheader)
-rm -f stamp-h1
-touch config.h.in
-cd . && /bin/bash ./config.status config.h
-config.status: creating config.h
+>>>> Updating gaw
+Already up to date.
 make  all-recursive
 make[1]: ディレクトリ '/root/src/xschem-gaw' に入ります
 Making all in lib
 make[2]: ディレクトリ '/root/src/xschem-gaw/lib' に入ります
-gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread   -Wall -g -O2 -MT spicestream.o -MD -MP -MF .deps/spicestream.Tpo -c -o spicestream.o spicestream.c
-gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread   -Wall -g -O2 -MT ss_cazm.o -MD -MP -MF .deps/ss_cazm.Tpo -c -o ss_cazm.o ss_cazm.c
-gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread   -Wall -g -O2 -MT ss_nsout.o -MD -MP -MF .deps/ss_nsout.Tpo -c -o ss_nsout.o ss_nsout.c
-gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread   -Wall -g -O2 -MT ss_spice3.o -MD -MP -MF .deps/ss_spice3.Tpo -c -o ss_spice3.o ss_spice3.c
-mv -f .deps/ss_cazm.Tpo .deps/ss_cazm.Po
-mv -f .deps/spicestream.Tpo .deps/spicestream.Po
-gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread   -Wall -g -O2 -MT ss_hspice.o -MD -MP -MF .deps/ss_hspice.Tpo -c -o ss_hspice.o ss_hspice.c
-gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread   -Wall -g -O2 -MT ss_spice2.o -MD -MP -MF .deps/ss_spice2.Tpo -c -o ss_spice2.o ss_spice2.c
-mv -f .deps/ss_nsout.Tpo .deps/ss_nsout.Po
-gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread   -Wall -g -O2 -MT ss_wav.o -MD -MP -MF .deps/ss_wav.Tpo -c -o ss_wav.o ss_wav.c
-mv -f .deps/ss_spice3.Tpo .deps/ss_spice3.Po
-gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread   -Wall -g -O2 -MT fileformat.o -MD -MP -MF .deps/fileformat.Tpo -c -o fileformat.o fileformat.c
-mv -f .deps/ss_spice2.Tpo .deps/ss_spice2.Po
-gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread   -Wall -g -O2 -MT util.o -MD -MP -MF .deps/util.Tpo -c -o util.o util.c
-mv -f .deps/fileformat.Tpo .deps/fileformat.Po
-gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread   -Wall -g -O2 -MT fdbuf.o -MD -MP -MF .deps/fdbuf.Tpo -c -o fdbuf.o fdbuf.c
-mv -f .deps/ss_wav.Tpo .deps/ss_wav.Po
-gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread   -Wall -g -O2 -MT dbuf.o -MD -MP -MF .deps/dbuf.Tpo -c -o dbuf.o dbuf.c
-mv -f .deps/ss_hspice.Tpo .deps/ss_hspice.Po
-gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread   -Wall -g -O2 -MT msglog.o -MD -MP -MF .deps/msglog.Tpo -c -o msglog.o msglog.c
-mv -f .deps/util.Tpo .deps/util.Po
-gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread   -Wall -g -O2 -MT appmem.o -MD -MP -MF .deps/appmem.Tpo -c -o appmem.o appmem.c
-mv -f .deps/fdbuf.Tpo .deps/fdbuf.Po
-gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread   -Wall -g -O2 -MT appclass.o -MD -MP -MF .deps/appclass.Tpo -c -o appclass.o appclass.c
-mv -f .deps/appmem.Tpo .deps/appmem.Po
-gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread   -Wall -g -O2 -MT dataset.o -MD -MP -MF .deps/dataset.Tpo -c -o dataset.o dataset.c
-mv -f .deps/appclass.Tpo .deps/appclass.Po
-gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread   -Wall -g -O2 -MT wavevar.o -MD -MP -MF .deps/wavevar.Tpo -c -o wavevar.o wavevar.c
-mv -f .deps/dbuf.Tpo .deps/dbuf.Po
-mv -f .deps/msglog.Tpo .deps/msglog.Po
-gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread   -Wall -g -O2 -MT wavetable.o -MD -MP -MF .deps/wavetable.Tpo -c -o wavetable.o wavetable.c
-gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread   -Wall -g -O2 -MT sndstream.o -MD -MP -MF .deps/sndstream.Tpo -c -o sndstream.o sndstream.c
-mv -f .deps/dataset.Tpo .deps/dataset.Po
-mv -f .deps/sndstream.Tpo .deps/sndstream.Po
-gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread   -Wall -g -O2 -MT sndparams.o -MD -MP -MF .deps/sndparams.Tpo -c -o sndparams.o sndparams.c
-gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread   -Wall -g -O2 -MT sockcon.o -MD -MP -MF .deps/sockcon.Tpo -c -o sockcon.o sockcon.c
-mv -f .deps/sndparams.Tpo .deps/sndparams.Po
-gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread   -Wall -g -O2 -MT fdsel.o -MD -MP -MF .deps/fdsel.Tpo -c -o fdsel.o fdsel.c
-mv -f .deps/wavetable.Tpo .deps/wavetable.Po
-gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread   -Wall -g -O2 -MT stutil.o -MD -MP -MF .deps/stutil.Tpo -c -o stutil.o stutil.c
-mv -f .deps/wavevar.Tpo .deps/wavevar.Po
-gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread   -Wall -g -O2 -MT fsutil.o -MD -MP -MF .deps/fsutil.Tpo -c -o fsutil.o fsutil.c
-mv -f .deps/fdsel.Tpo .deps/fdsel.Po
-gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread   -Wall -g -O2 -MT strcatdup.o -MD -MP -MF .deps/strcatdup.Tpo -c -o strcatdup.o strcatdup.c
-mv -f .deps/stutil.Tpo .deps/stutil.Po
-gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread   -Wall -g -O2 -MT incvar.o -MD -MP -MF .deps/incvar.Tpo -c -o incvar.o incvar.c
-mv -f .deps/fsutil.Tpo .deps/fsutil.Po
-gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread   -Wall -g -O2 -MT strobj.o -MD -MP -MF .deps/strobj.Tpo -c -o strobj.o strobj.c
-mv -f .deps/incvar.Tpo .deps/incvar.Po
-mv -f .deps/strobj.Tpo .deps/strobj.Po
-gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread   -Wall -g -O2 -MT duprintf.o -MD -MP -MF .deps/duprintf.Tpo -c -o duprintf.o duprintf.c
-gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread   -Wall -g -O2 -MT dlist.o -MD -MP -MF .deps/dlist.Tpo -c -o dlist.o dlist.c
-mv -f .deps/strcatdup.Tpo .deps/strcatdup.Po
-gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread   -Wall -g -O2 -MT dliststr.o -MD -MP -MF .deps/dliststr.Tpo -c -o dliststr.o dliststr.c
-mv -f .deps/sockcon.Tpo .deps/sockcon.Po
-gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread   -Wall -g -O2 -MT array.o -MD -MP -MF .deps/array.Tpo -c -o array.o array.c
-mv -f .deps/dliststr.Tpo .deps/dliststr.Po
-gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread   -Wall -g -O2 -MT strmem.o -MD -MP -MF .deps/strmem.Tpo -c -o strmem.o strmem.c
-mv -f .deps/duprintf.Tpo .deps/duprintf.Po
-gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread   -Wall -g -O2 -MT arraystruct.o -MD -MP -MF .deps/arraystruct.Tpo -c -o arraystruct.o arraystruct.c
-mv -f .deps/dlist.Tpo .deps/dlist.Po
-gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread   -Wall -g -O2 -MT fileutil.o -MD -MP -MF .deps/fileutil.Tpo -c -o fileutil.o fileutil.c
-mv -f .deps/fileutil.Tpo .deps/fileutil.Po
-gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread   -Wall -g -O2 -MT arraystr.o -MD -MP -MF .deps/arraystr.Tpo -c -o arraystr.o arraystr.c
-mv -f .deps/array.Tpo .deps/array.Po
-gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread   -Wall -g -O2 -MT datestrconv.o -MD -MP -MF .deps/datestrconv.Tpo -c -o datestrconv.o datestrconv.c
-mv -f .deps/strmem.Tpo .deps/strmem.Po
-mv -f .deps/arraystruct.Tpo .deps/arraystruct.Po
-mv -f .deps/arraystr.Tpo .deps/arraystr.Po
-mv -f .deps/datestrconv.Tpo .deps/datestrconv.Po
-rm -f libload.a
-ar cru libload.a spicestream.o ss_cazm.o ss_nsout.o ss_spice3.o ss_hspice.o ss_spice2.o ss_wav.o fileformat.o util.o fdbuf.o dbuf.o msglog.o appmem.o appclass.o dataset.o wavevar.o wavetable.o sndstream.o sndparams.o sockcon.o fdsel.o stutil.o fsutil.o strcatdup.o incvar.o strobj.o duprintf.o dlist.o dliststr.o array.o strmem.o arraystruct.o fileutil.o arraystr.o datestrconv.o 
-ar: `u' modifier ignored since `D' is the default (see `U')
-ranlib libload.a
+make[2]: 'all' に対して行うべき事はありません.
 make[2]: ディレクトリ '/root/src/xschem-gaw/lib' から出ます
 Making all in src
 make[2]: ディレクトリ '/root/src/xschem-gaw/src' に入ります
-gcc -DHAVE_CONFIG_H -I. -I.. -I../lib -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread  -I../lib  -Wall -g -O2 -MT gawmain.o -MD -MP -MF .deps/gawmain.Tpo -c -o gawmain.o gawmain.c
-gcc -DHAVE_CONFIG_H -I. -I.. -I../lib -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread  -I../lib  -Wall -g -O2 -MT gawapp.o -MD -MP -MF .deps/gawapp.Tpo -c -o gawapp.o gawapp.c
-gcc -DHAVE_CONFIG_H -I. -I.. -I../lib -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread  -I../lib  -Wall -g -O2 -MT userprefs.o -MD -MP -MF .deps/userprefs.Tpo -c -o userprefs.o userprefs.c
-gcc -DHAVE_CONFIG_H -I. -I.. -I../lib -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread  -I../lib  -Wall -g -O2 -MT gawzoom.o -MD -MP -MF .deps/gawzoom.Tpo -c -o gawzoom.o gawzoom.c
-mv -f .deps/userprefs.Tpo .deps/userprefs.Po
-gcc -DHAVE_CONFIG_H -I. -I.. -I../lib -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread  -I../lib  -Wall -g -O2 -MT gawmisc.o -MD -MP -MF .deps/gawmisc.Tpo -c -o gawmisc.o gawmisc.c
-gawmain.c: In function ‘aw_submenu_activate_gaction’:
-gawmain.c:120:17: warning: unused variable ‘name’ [-Wunused-variable]
-  120 |    const gchar *name = g_action_get_name (G_ACTION (action));
-      |                 ^~~~
-gawmain.c: In function ‘aw_create_main_window’:
-gawmain.c:643:7: warning: ‘gdk_screen_get_monitor_workarea’ is deprecated: Use 'gdk_monitor_get_workarea' instead [-Wdeprecated-declarations]
-  643 |       gdk_screen_get_monitor_workarea (screen, 0, &dest);
-      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from /usr/include/gtk-3.0/gdk/gdkapplaunchcontext.h:31,
-                 from /usr/include/gtk-3.0/gdk/gdk.h:32,
-                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
-                 from gawmain.c:22:
-/usr/include/gtk-3.0/gdk/gdkscreen.h:82:14: note: declared here
-   82 | void         gdk_screen_get_monitor_workarea  (GdkScreen    *screen,
-      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-gawzoom.c: In function ‘az_cmd_zoom_absolute’:
-gawzoom.c:82:4: warning: ‘gtk_adjustment_value_changed’ is deprecated [-Wdeprecated-declarations]
-   82 |    gtk_adjustment_value_changed (ud->xadj);
-      |    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from /usr/include/gtk-3.0/gtk/gtk.h:38,
-                 from gawzoom.c:9:
-/usr/include/gtk-3.0/gtk/gtkadjustment.h:89:12: note: declared here
-   89 | void       gtk_adjustment_value_changed         (GtkAdjustment   *adjustment);
-      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-mv -f .deps/gawzoom.Tpo .deps/gawzoom.Po
-gcc -DHAVE_CONFIG_H -I. -I.. -I../lib -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread  -I../lib  -Wall -g -O2 -MT gawabout.o -MD -MP -MF .deps/gawabout.Tpo -c -o gawabout.o gawabout.c
-mv -f .deps/gawmain.Tpo .deps/gawmain.Po
-gcc -DHAVE_CONFIG_H -I. -I.. -I../lib -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread  -I../lib  -Wall -g -O2 -MT gawsnd.o -MD -MP -MF .deps/gawsnd.Tpo -c -o gawsnd.o gawsnd.c
-mv -f .deps/gawmisc.Tpo .deps/gawmisc.Po
-gcc -DHAVE_CONFIG_H -I. -I.. -I../lib -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread  -I../lib  -Wall -g -O2 -MT gawio.o -MD -MP -MF .deps/gawio.Tpo -c -o gawio.o gawio.c
-mv -f .deps/gawapp.Tpo .deps/gawapp.Po
-gcc -DHAVE_CONFIG_H -I. -I.. -I../lib -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread  -I../lib  -Wall -g -O2 -MT gawimg.o -MD -MP -MF .deps/gawimg.Tpo -c -o gawimg.o gawimg.c
-In file included from ./userprefs.h:35,
-                 from ./gaw.h:6,
-                 from gawio.c:24:
-../lib/fdbuf.h:9: warning: "_GNU_SOURCE" redefined
-    9 | #define _GNU_SOURCE      /* off_t */
-      | 
-gawio.c:6: note: this is the location of the previous definition
-    6 | #define _GNU_SOURCE 1   /* netdb.h */
-      | 
-mv -f .deps/gawabout.Tpo .deps/gawabout.Po
-gawio.c: In function ‘aio_copyvar’:
-gawio.c:164:15: warning: variable ‘wp’ set but not used [-Wunused-but-set-variable]
-  164 |    WavePanel *wp;
-      |               ^~
-gcc -DHAVE_CONFIG_H -I. -I.. -I../lib -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread  -I../lib  -Wall -g -O2 -MT datafile.o -MD -MP -MF .deps/datafile.Tpo -c -o datafile.o datafile.c
-mv -f .deps/gawsnd.Tpo .deps/gawsnd.Po
-gcc -DHAVE_CONFIG_H -I. -I.. -I../lib -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread  -I../lib  -Wall -g -O2 -MT gawcolor.o -MD -MP -MF .deps/gawcolor.Tpo -c -o gawcolor.o gawcolor.c
-mv -f .deps/gawimg.Tpo .deps/gawimg.Po
-gcc -DHAVE_CONFIG_H -I. -I.. -I../lib -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread  -I../lib  -Wall -g -O2 -MT gawfile.o -MD -MP -MF .deps/gawfile.Tpo -c -o gawfile.o gawfile.c
-mv -f .deps/gawio.Tpo .deps/gawio.Po
-gcc -DHAVE_CONFIG_H -I. -I.. -I../lib -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread  -I../lib  -Wall -g -O2 -MT gawdnd.o -MD -MP -MF .deps/gawdnd.Tpo -c -o gawdnd.o gawdnd.c
-datafile.c: In function ‘datafile_list_button_press_cb’:
-datafile.c:156:7: warning: ‘gtk_menu_popup’ is deprecated: Use '(gtk_menu_popup_at_widget, gtk_menu_popup_at_pointer, gtk_menu_popup_at_rect)' instead [-Wdeprecated-declarations]
-  156 |       gtk_menu_popup (GTK_MENU (wdata->lbpopmenu), NULL, NULL,
-      |       ^~~~~~~~~~~~~~
-In file included from /usr/include/gtk-3.0/gtk/gtklabel.h:34,
-                 from /usr/include/gtk-3.0/gtk/gtkaccellabel.h:35,
-                 from /usr/include/gtk-3.0/gtk/gtk.h:33,
-                 from datafile.c:9:
-/usr/include/gtk-3.0/gtk/gtkmenu.h:138:12: note: declared here
-  138 | void       gtk_menu_popup                 (GtkMenu             *menu,
-      |            ^~~~~~~~~~~~~~
-mv -f .deps/gawcolor.Tpo .deps/gawcolor.Po
-gcc -DHAVE_CONFIG_H -I. -I.. -I../lib -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread  -I../lib  -Wall -g -O2 -MT gawda.o -MD -MP -MF .deps/gawda.Tpo -c -o gawda.o gawda.c
-mv -f .deps/datafile.Tpo .deps/datafile.Po
-gcc -DHAVE_CONFIG_H -I. -I.. -I../lib -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread  -I../lib  -Wall -g -O2 -MT gawpanel.o -MD -MP -MF .deps/gawpanel.Tpo -c -o gawpanel.o gawpanel.c
-mv -f .deps/gawdnd.Tpo .deps/gawdnd.Po
-gcc -DHAVE_CONFIG_H -I. -I.. -I../lib -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread  -I../lib  -Wall -g -O2 -MT gawcursor.o -MD -MP -MF .deps/gawcursor.Tpo -c -o gawcursor.o gawcursor.c
-mv -f .deps/gawfile.Tpo .deps/gawfile.Po
-gcc -DHAVE_CONFIG_H -I. -I.. -I../lib -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread  -I../lib  -Wall -g -O2 -MT gawwave.o -MD -MP -MF .deps/gawwave.Tpo -c -o gawwave.o gawwave.c
-gawda.c: In function ‘da_set_gdk_cursor’:
-gawda.c:55:7: warning: ‘gdk_cursor_new’ is deprecated: Use 'gdk_cursor_new_for_display' instead [-Wdeprecated-declarations]
-   55 |       cursor = gdk_cursor_new(cursorType);
-      |       ^~~~~~
-In file included from /usr/include/gtk-3.0/gdk/gdk.h:34,
-                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
-                 from gawda.c:10:
-/usr/include/gtk-3.0/gdk/gdkcursor.h:228:12: note: declared here
-  228 | GdkCursor* gdk_cursor_new                (GdkCursorType    cursor_type);
-      |            ^~~~~~~~~~~~~~
-gawda.c: In function ‘da_drawing_button_press_cb’:
-gawda.c:462:7: warning: ‘gtk_menu_popup’ is deprecated: Use '(gtk_menu_popup_at_widget, gtk_menu_popup_at_pointer, gtk_menu_popup_at_rect)' instead [-Wdeprecated-declarations]
-  462 |       gtk_menu_popup (GTK_MENU (menu), NULL, NULL,
-      |       ^~~~~~~~~~~~~~
-In file included from /usr/include/gtk-3.0/gtk/gtklabel.h:34,
-                 from /usr/include/gtk-3.0/gtk/gtkaccellabel.h:35,
-                 from /usr/include/gtk-3.0/gtk/gtk.h:33:
-/usr/include/gtk-3.0/gtk/gtkmenu.h:138:12: note: declared here
-  138 | void       gtk_menu_popup                 (GtkMenu             *menu,
-      |            ^~~~~~~~~~~~~~
-gawwave.c: In function ‘wave_vw_button_press_cb’:
-gawwave.c:142:7: warning: ‘gtk_menu_popup’ is deprecated: Use '(gtk_menu_popup_at_widget, gtk_menu_popup_at_pointer, gtk_menu_popup_at_rect)' instead [-Wdeprecated-declarations]
-  142 |       gtk_menu_popup (GTK_MENU (vw->buttonpopup), NULL, NULL,
-      |       ^~~~~~~~~~~~~~
-In file included from /usr/include/gtk-3.0/gtk/gtklabel.h:34,
-                 from /usr/include/gtk-3.0/gtk/gtkaccellabel.h:35,
-                 from /usr/include/gtk-3.0/gtk/gtk.h:33,
-                 from gawwave.c:9:
-/usr/include/gtk-3.0/gtk/gtkmenu.h:138:12: note: declared here
-  138 | void       gtk_menu_popup                 (GtkMenu             *menu,
-      |            ^~~~~~~~~~~~~~
-mv -f .deps/gawpanel.Tpo .deps/gawpanel.Po
-gcc -DHAVE_CONFIG_H -I. -I.. -I../lib -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread  -I../lib  -Wall -g -O2 -MT gawgrip.o -MD -MP -MF .deps/gawgrip.Tpo -c -o gawgrip.o gawgrip.c
-mv -f .deps/gawcursor.Tpo .deps/gawcursor.Po
-gcc -DHAVE_CONFIG_H -I. -I.. -I../lib -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread  -I../lib  -Wall -g -O2 -MT gawlabel.o -MD -MP -MF .deps/gawlabel.Tpo -c -o gawlabel.o gawlabel.c
-mv -f .deps/gawda.Tpo .deps/gawda.Po
-mv -f .deps/gawwave.Tpo .deps/gawwave.Po
-gcc -DHAVE_CONFIG_H -I. -I.. -I../lib -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread  -I../lib  -Wall -g -O2 -MT gawhelp.o -MD -MP -MF .deps/gawhelp.Tpo -c -o gawhelp.o gawhelp.c
-gcc -DHAVE_CONFIG_H -I. -I.. -I../lib -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread  -I../lib  -Wall -g -O2 -MT gawtext.o -MD -MP -MF .deps/gawtext.Tpo -c -o gawtext.o gawtext.c
-gawgrip.c: In function ‘ag_grip_crossing_cb’:
-gawgrip.c:102:7: warning: ‘gdk_cursor_new’ is deprecated: Use 'gdk_cursor_new_for_display' instead [-Wdeprecated-declarations]
-  102 |       GdkCursor *cursor = gdk_cursor_new(GDK_SB_H_DOUBLE_ARROW);
-      |       ^~~~~~~~~
-In file included from /usr/include/gtk-3.0/gdk/gdk.h:34,
-                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
-                 from gawgrip.c:10:
-/usr/include/gtk-3.0/gdk/gdkcursor.h:228:12: note: declared here
-  228 | GdkCursor* gdk_cursor_new                (GdkCursorType    cursor_type);
-      |            ^~~~~~~~~~~~~~
-gawtext.c: In function ‘gawtext_select_font_cb’:
-gawtext.c:213:4: warning: ‘gtk_font_button_get_font_name’ is deprecated [-Wdeprecated-declarations]
-  213 |    font = gtk_font_button_get_font_name (GTK_FONT_BUTTON (button));
-      |    ^~~~
-In file included from /usr/include/gtk-3.0/gtk/gtk.h:109,
-                 from gawtext.c:10:
-/usr/include/gtk-3.0/gtk/gtkfontbutton.h:96:23: note: declared here
-   96 | const gchar *         gtk_font_button_get_font_name  (GtkFontButton *font_button);
-      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-gawhelp.c: In function ‘ah_show_page’:
-gawhelp.c:45:4: warning: ignoring return value of ‘system’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
-   45 |    system( cmdline);
-      |    ^~~~~~~~~~~~~~~~
-mv -f .deps/gawhelp.Tpo .deps/gawhelp.Po
-mv -f .deps/gawgrip.Tpo .deps/gawgrip.Po
-gcc -DHAVE_CONFIG_H -I. -I.. -I../lib -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread  -I../lib  -Wall -g -O2 -MT gawdraw.o -MD -MP -MF .deps/gawdraw.Tpo -c -o gawdraw.o gawdraw.c
-gcc -DHAVE_CONFIG_H -I. -I.. -I../lib -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread  -I../lib  -Wall -g -O2 -MT gawutil.o -MD -MP -MF .deps/gawutil.Tpo -c -o gawutil.o gawutil.c
-mv -f .deps/gawtext.Tpo .deps/gawtext.Po
-gcc -DHAVE_CONFIG_H -I. -I.. -I../lib -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread  -I../lib  -Wall -g -O2 -MT gawmenus.o -MD -MP -MF .deps/gawmenus.Tpo -c -o gawmenus.o gawmenus.c
-mv -f .deps/gawlabel.Tpo .deps/gawlabel.Po
-mv -f .deps/gawutil.Tpo .deps/gawutil.Po
-mv -f .deps/gawdraw.Tpo .deps/gawdraw.Po
-mv -f .deps/gawmenus.Tpo .deps/gawmenus.Po
-gcc -Wall -g -O2   -o gaw gawmain.o gawapp.o userprefs.o gawzoom.o gawmisc.o gawabout.o gawsnd.o gawio.o gawimg.o datafile.o gawcolor.o gawfile.o gawdnd.o gawda.o gawpanel.o gawcursor.o gawwave.o gawgrip.o gawlabel.o gawhelp.o gawtext.o gawdraw.o gawutil.o gawmenus.o ../lib/libload.a -L/usr/local/lib -lgtk-3 -lgdk-3 -lz -lpangocairo-1.0 -lpango-1.0 -lharfbuzz -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0   -lXext -lm  
+make[2]: 'all' に対して行うべき事はありません.
 make[2]: ディレクトリ '/root/src/xschem-gaw/src' から出ます
 Making all in po
 make[2]: ディレクトリ '/root/src/xschem-gaw/po' に入ります
@@ -2976,21 +2196,21 @@ make[1]: ディレクトリ '/root/src/magic/tcltk' から出ます
 for dir in magic net2ir tcltk; do \
 	(cd $dir && make tcl-main) || exit 1; done
 --- making techs
+for dir in scmos; do \
+	(cd $dir && make all) || exit 1; done
 make[1]: ディレクトリ '/root/src/magic/magic' に入ります
 make[1]: 'tcl-main' に対して行うべき事はありません.
 make[1]: ディレクトリ '/root/src/magic/magic' から出ます
-for dir in scmos; do \
-	(cd $dir && make all) || exit 1; done
 make[1]: ディレクトリ '/root/src/magic/net2ir' に入ります
 echo "Nothing to do here"
 Nothing to do here
 make[1]: ディレクトリ '/root/src/magic/net2ir' から出ます
-make[1]: ディレクトリ '/root/src/magic/tcltk' に入ります
-make[1]: 'tcl-main' に対して行うべき事はありません.
-make[1]: ディレクトリ '/root/src/magic/tcltk' から出ます
 make[1]: ディレクトリ '/root/src/magic/scmos' に入ります
 make[1]: 'all' に対して行うべき事はありません.
 make[1]: ディレクトリ '/root/src/magic/scmos' から出ます
+make[1]: ディレクトリ '/root/src/magic/tcltk' に入ります
+make[1]: 'tcl-main' に対して行うべき事はありません.
+make[1]: ディレクトリ '/root/src/magic/tcltk' から出ます
 --- installing executable to /usr/local/bin
 --- installing runtime files to /usr/local/lib
 make[1]: ディレクトリ '/root/src/magic' に入ります
@@ -3086,32 +2306,14 @@ make[2]: ディレクトリ '/root/src/magic/tcltk' から出ます
 make[1]: ディレクトリ '/root/src/magic' から出ます
 Checking for magic installation... -e [ OK ]
 >>>> Updating netgen
-remote: Enumerating objects: 7, done.
-remote: Counting objects: 100% (7/7), done.
-remote: Compressing objects: 100% (3/3), done.
-remote: Total 7 (delta 3), reused 7 (delta 3), pack-reused 0 (from 0)
-Unpacking objects: 100% (7/7), 1.03 KiB | 175.00 KiB/s, done.
-From https://github.com/RTimothyEdwards/netgen
-   edb5074..80f9263  netgen-1.5 -> origin/netgen-1.5
-   4443826..c269f1d  master     -> origin/master
- * [new tag]         1.5.297    -> 1.5.297
-Updating edb5074..80f9263
-Fast-forward
- VERSION        | 2 +-
- base/netfile.c | 5 +++++
- 2 files changed, 6 insertions(+), 1 deletion(-)
+Already up to date.
 --- errors and warnings logged in file make.log
 make[1]: ディレクトリ '/root/src/netgen' に入ります
 --- making modules
 for dir in base tcltk; do \
 	(cd $dir && make module); done
 make[2]: ディレクトリ '/root/src/netgen/base' に入ります
---- compiling base/netfile.o
-rm -f netfile.o
-gcc -g -m64 -fPIC -fPIC  -I/usr/include/tcl8.6  -I. -I..  -DCAD_DIR=\"/usr/local/lib\" -DTCL_DIR=\"/usr/local/lib/netgen/tcl\"  -DUSE_TCL_STUBS -DUSE_TK_STUBS -DPACKAGE_NAME=\"netgen\" -DPACKAGE_TARNAME=\"netgen\" -DPACKAGE_VERSION=\"1.3\" -DPACKAGE_STRING=\"netgen\ 1.3\" -DPACKAGE_BUGREPORT=\"eda-dev@opencircuitdesign.com\" -DPACKAGE_URL=\"\" -DNETGEN_VERSION=\"1.5\" -DNETGEN_REVISION=\"295\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DSIZEOF_VOID_P=8 -DSIZEOF_UNSIGNED_INT=4 -DSIZEOF_UNSIGNED_LONG=8 -DSIZEOF_UNSIGNED_LONG_LONG=8 -DSTDC_HEADERS=1 -DHAVE_SETENV=1 -DHAVE_PUTENV=1 -DHAVE_DIRENT_H=1 -DHAVE_LIMITS_H=1 -DHAVE_VA_COPY=1 -DHAVE___VA_COPY=1 -DDBUG_OFF=1 -DTCL_NETGEN=1 -Dlinux=1 -DSYSV=1 -DISC=1 -DSHDLIB_EXT=\".so\" -DNDEBUG -DNDEBUG -DNETGEN_DATE="\"`date`\""  -c netfile.c
---- linking libbase.o
-rm -f libbase.o
-/usr/bin/ld -r actel.o ccode.o greedy.o ntk.o print.o actellib.o embed.o hash.o netfile.o objlist.o query.o anneal.o ext.o netcmp.o netgen.o pdutils.o random.o timing.o bottomup.o flatten.o place.o spice.o verilog.o wombat.o xilinx.o xillib.o -o libbase.o 
+make[2]: 'module' に対して行うべき事はありません.
 make[2]: ディレクトリ '/root/src/netgen/base' から出ます
 make[2]: ディレクトリ '/root/src/netgen/tcltk' に入ります
 make[2]: 'module' に対して行うべき事はありません.
@@ -3120,11 +2322,7 @@ make[2]: ディレクトリ '/root/src/netgen/tcltk' から出ます
 for dir in netgen python tcltk; do \
 	(cd $dir && make tcl-main); done
 make[2]: ディレクトリ '/root/src/netgen/netgen' に入ります
---- making netgen Tcl library (tclnetgen.so)
-rm -f tclnetgen.so
-gcc -g -m64 -fPIC -fPIC  -I/usr/include/tcl8.6  -I../base -I. -I..  -o tclnetgen.so -shared -Wl,-soname,tclnetgen.so -Wl,--version-script=../netgen/symbol.map \
-	 ../base/libbase.o ../tcltk/libtcltk.o  \
-	-lc  -lm -L/usr/lib/x86_64-linux-gnu -ltclstub8.6 
+make[2]: 'tcl-main' に対して行うべき事はありません.
 make[2]: ディレクトリ '/root/src/netgen/netgen' から出ます
 make[2]: ディレクトリ '/root/src/netgen/python' に入ります
 make[2]: 'tcl-main' に対して行うべき事はありません.
@@ -3138,34 +2336,34 @@ make[1]: ディレクトリ '/root/src/netgen' から出ます
 --- installing run-time files to /usr/local/lib
 Checking for netgen installation... -e [ OK ]
 >>>> Installing ngspice-43
---2025-08-26 17:25:32--  https://sourceforge.net/projects/ngspice/files/ng-spice-rework/old-releases/43/ngspice-43.tar.gz
-sourceforge.net (sourceforge.net) をDNSに問いあわせています... 104.18.12.149, 104.18.13.149, 2606:4700::6812:d95, ...
-sourceforge.net (sourceforge.net)|104.18.12.149|:443 に接続しています... 接続しました。
+--2025-08-26 20:02:19--  https://sourceforge.net/projects/ngspice/files/ng-spice-rework/old-releases/43/ngspice-43.tar.gz
+sourceforge.net (sourceforge.net) をDNSに問いあわせています... 104.18.13.149, 104.18.12.149, 2606:4700::6812:d95, ...
+sourceforge.net (sourceforge.net)|104.18.13.149|:443 に接続しています... 接続しました。
 HTTP による接続要求を送信しました、応答を待っています... 301 Moved Permanently
 場所: https://sourceforge.net/projects/ngspice/files/ng-spice-rework/old-releases/43/ngspice-43.tar.gz/ [続く]
---2025-08-26 17:25:33--  https://sourceforge.net/projects/ngspice/files/ng-spice-rework/old-releases/43/ngspice-43.tar.gz/
+--2025-08-26 20:02:19--  https://sourceforge.net/projects/ngspice/files/ng-spice-rework/old-releases/43/ngspice-43.tar.gz/
 sourceforge.net:443 への接続を再利用します。
 HTTP による接続要求を送信しました、応答を待っています... 301 Moved Permanently
 場所: https://sourceforge.net/projects/ngspice/files/ng-spice-rework/old-releases/43/ngspice-43.tar.gz/download [続く]
---2025-08-26 17:25:34--  https://sourceforge.net/projects/ngspice/files/ng-spice-rework/old-releases/43/ngspice-43.tar.gz/download
+--2025-08-26 20:02:19--  https://sourceforge.net/projects/ngspice/files/ng-spice-rework/old-releases/43/ngspice-43.tar.gz/download
 sourceforge.net:443 への接続を再利用します。
 HTTP による接続要求を送信しました、応答を待っています... 302 Found
-場所: https://downloads.sourceforge.net/project/ngspice/ng-spice-rework/old-releases/43/ngspice-43.tar.gz?ts=gAAAAABorW-C2ZYgX4XUYIjzPtSueDk6rxRxOC-7XSM_PlxwDfLRHMraIbrkUgpvrTYjGAJZE66-Kvg54BSQ7oFGrfrbQvlRZw%3D%3D&use_mirror=master&r= [続く]
---2025-08-26 17:25:34--  https://downloads.sourceforge.net/project/ngspice/ng-spice-rework/old-releases/43/ngspice-43.tar.gz?ts=gAAAAABorW-C2ZYgX4XUYIjzPtSueDk6rxRxOC-7XSM_PlxwDfLRHMraIbrkUgpvrTYjGAJZE66-Kvg54BSQ7oFGrfrbQvlRZw%3D%3D&use_mirror=master&r=
+場所: https://downloads.sourceforge.net/project/ngspice/ng-spice-rework/old-releases/43/ngspice-43.tar.gz?ts=gAAAAABorZQ8z5FH2oa0m5oEUWOdHVFHwTbPX8oemSK3CzBzpREWcKiCmrMgM9daQE_mAbHuMATMOw7xAOXAj-S6s9Pw8-m3Vw%3D%3D&use_mirror=master&r= [続く]
+--2025-08-26 20:02:20--  https://downloads.sourceforge.net/project/ngspice/ng-spice-rework/old-releases/43/ngspice-43.tar.gz?ts=gAAAAABorZQ8z5FH2oa0m5oEUWOdHVFHwTbPX8oemSK3CzBzpREWcKiCmrMgM9daQE_mAbHuMATMOw7xAOXAj-S6s9Pw8-m3Vw%3D%3D&use_mirror=master&r=
 downloads.sourceforge.net (downloads.sourceforge.net) をDNSに問いあわせています... 104.18.12.149, 104.18.13.149, 2606:4700::6812:d95, ...
 downloads.sourceforge.net (downloads.sourceforge.net)|104.18.12.149|:443 に接続しています... 接続しました。
 HTTP による接続要求を送信しました、応答を待っています... 302 Found
 場所: https://master.dl.sourceforge.net/project/ngspice/ng-spice-rework/old-releases/43/ngspice-43.tar.gz?viasf=1 [続く]
---2025-08-26 17:25:34--  https://master.dl.sourceforge.net/project/ngspice/ng-spice-rework/old-releases/43/ngspice-43.tar.gz?viasf=1
+--2025-08-26 20:02:21--  https://master.dl.sourceforge.net/project/ngspice/ng-spice-rework/old-releases/43/ngspice-43.tar.gz?viasf=1
 master.dl.sourceforge.net (master.dl.sourceforge.net) をDNSに問いあわせています... 216.105.38.12
 master.dl.sourceforge.net (master.dl.sourceforge.net)|216.105.38.12|:443 に接続しています... 接続しました。
 HTTP による接続要求を送信しました、応答を待っています... 200 OK
 長さ: 10279606 (9.8M) [application/x-gzip]
-‘ngspice-43.tar.gz.1’ に保存中
+‘ngspice-43.tar.gz.3’ に保存中
 
-ngspice-43.tar.gz.1 100%[===================>]   9.80M  1.82MB/s    in 9.8s    
+ngspice-43.tar.gz.3 100%[===================>]   9.80M   108KB/s    in 36s     
 
-2025-08-26 17:25:45 (1.00 MB/s) - ‘ngspice-43.tar.gz.1’ へ保存完了 [10279606/10279606]
+2025-08-26 20:02:58 (281 KB/s) - ‘ngspice-43.tar.gz.3’ へ保存完了 [10279606/10279606]
 
 
 gzip: ngspice-43.tar.gz: not in gzip format
